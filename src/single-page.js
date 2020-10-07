@@ -30,7 +30,7 @@ export default function SinglePage(props) {
   return (
     <>
       <div style={{ display: "table-cell" }}>
-        <div style={{left: "50%"}}>
+        <div>
           <div style={{ display: "inline-block" }}>
             <button
               className="button"
@@ -59,7 +59,7 @@ export default function SinglePage(props) {
             </button>
           </div>
         </div>
-        <div style={{left: "50%"}}>
+        <div>
           <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} height={height} />
           </Document>

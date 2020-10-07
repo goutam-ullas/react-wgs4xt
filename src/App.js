@@ -1540,17 +1540,6 @@ class Application extends React.Component {
             zIndex: 100
           }}
         >
-          {/*Research Window - Inner Box*/}
-          <div
-            style={{
-              left: 0,
-              width: this.state.mapWidth/20,
-              height: window.innerHeight,
-              position: "absolute",
-              backgroundColor: "transparent",
-              zIndex: 101
-            }}
-          />
           {/*Research Window - Close Button*/}
           <span
             role="button"
@@ -1567,18 +1556,6 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          {/*Research Window - Image Holder
-          <div
-            className="research"
-            style={{
-              width: this.state.researchWidth,
-              leftBorder: this.state.researchBorder,
-              top: 10,
-              bottom: 10,
-              fontSize: 28,
-              zIndex: 100
-            }}
-          >*/}
           <div style={{position: "absolute",right:this.state.mapWidth/20}}>
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
@@ -1586,23 +1563,6 @@ class Application extends React.Component {
               pdf={sampleBase64pdf}
             />
             </div>
-
-            {/*Research Window - Image 1*/}
-            {/*
-            <img
-              style={{ marginLeft: 50, marginTop: window.innerHeight / 10 }}
-              src="https://i.imgur.com/oEgq3R8.jpg"
-              height={(4 * window.innerHeight) / 5}
-              width="auto"
-            />*/}
-            {/*Research Window - Image 2*/}
-            {/*}
-            <img
-              style={{ marginLeft: 50, marginTop: window.innerHeight / 10 }}
-              src="https://i.imgur.com/Fn7Komh.jpg"
-              height={(4 * window.innerHeight) / 5}
-              width="auto"
-            />*/}
           </div>
         {/*Map Dots PopUps*/}
         <div>
