@@ -1556,7 +1556,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div style={{position: "absolute",right:this.state.mapWidth/20}}>
+          <div style={{position: "absolute",right:this.state.mapWidth/15}}>
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
               height={this.state.mapHeight - 60}
