@@ -17,6 +17,7 @@ import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
 import AllPagesPDFViewer from "./all-pages";
 import { sampleBase64pdf } from "./nikiBase64pdf";
+
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm5pa2l0YSIsImEiOiJjazdtYzV2MDYwMzliM2dubnVubnJuMTRrIn0.6KqRhtWgMc_nGwMPAqmstQ";
 
