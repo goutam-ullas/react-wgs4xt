@@ -43,7 +43,8 @@ export default function SinglePage(props) {
           <div style={{ display: "inline-block" }}>
             <p
               style={{
-                fontSize: 16
+                fontSize: 16,
+                fontFamily: "ballinger-mono"
               }}
             >
               {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
