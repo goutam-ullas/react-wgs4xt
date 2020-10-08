@@ -29,8 +29,8 @@ export default function SinglePage(props) {
 
   return (
     <>
-      <div style={{ display: "table-cell" }}>
-        <div>
+      <div style={{ display: "table-cell", verticalAlign: "middle" }}>
+        <div style={{textAlign: "center", verticalAlign = "middle"}}>
           <div style={{ display: "inline-block" }}>
             <button
               className="button"
