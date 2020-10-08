@@ -877,7 +877,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page3Vis
+            visibility: this.state.page2Vis
           }}
         >
           {/*Theme 1 Description*/}
@@ -910,7 +910,7 @@ class Application extends React.Component {
           />
         </div>
 
-        {/*Page 2: Theme 2*/}
+        {/*Page 2: Theme 2
         <div
           style={{
             position: "fixed",
@@ -922,8 +922,8 @@ class Application extends React.Component {
             visibility: this.state.page2Vis,
             backgroundColor: "transparent"
           }}
-        >
-          {/*Theme 2 - Background image*/}
+        >*/}
+          {/*Theme 2 - Background image
           <img
             style={{
               position: "fixed",
@@ -934,8 +934,8 @@ class Application extends React.Component {
               zIndex: 1
             }}
             src={this.theme2Img}
-          />
-          {/*Theme 2 Description*/}
+          />*/}
+          {/*Theme 2 Description
           <div
             style={{
               padding: 20,
@@ -948,8 +948,8 @@ class Application extends React.Component {
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
-          </div>
-          {/*Theme 2 Video*/}
+          </div>*/}
+          {/*Theme 2 Video
           <ReactPlayer
             className="video"
             style={{
@@ -965,7 +965,7 @@ class Application extends React.Component {
             onPlay={() => this.setState({ videoZindex3: 10 })}
             onPause={() => this.setState({ videoZindex3: 0 })}
           />
-        </div>
+        </div>*/}
 
         {/*Page 4: Theme 3*/}
         <div
@@ -976,7 +976,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page4Vis
+            visibility: this.state.page3Vis
           }}
         >
           {/*Theme 3 Description*/}
@@ -1030,7 +1030,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page5Vis
+            visibility: this.state.pageVis
           }}
         >
           {/*Theme 4 Description*/}

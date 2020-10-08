@@ -379,10 +379,10 @@ display:inline;
 
 .themeDesc{
   background-color: white;
-  color: #fd3217;
+  color: #000000;
   align-self: "flex-start";
   font-family: "Junicode";
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .legendDot {
