@@ -75,7 +75,7 @@ class Application extends React.Component {
       themeDescWidth: "40%",
       themeVidLeft: 0.05 * window.innerWidth,
       themeDescLeft: 0.5 * window.innerWidth,
-      themeVidRight: 0.29 * window.innerWidth,
+
       page1Vis: "visible",
       page2Vis: "hidden",
       page3Vis: "hidden",
