@@ -866,7 +866,7 @@ class Application extends React.Component {
             zIndex: 1
           }}
         >
-          <text className="themeDesc">{this.theme0Desc}</text>
+          <ext className="themeDesc">{this.theme0Desc}</Text>
         </div>
         {/*Page 1 Mute Control*/}
         <span
