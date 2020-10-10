@@ -74,7 +74,7 @@ class Application extends React.Component {
       popUpColor: "",
       scaleDistance: 13,
       themeDescWidth: "40%",
-      themeDescTop : 500,
+      themeDescTop : 100,
       themeVidLeft: 0.05 * window.innerWidth,
       themeDescLeft: 0.5 * window.innerWidth,
       themeVidRight: 0.29 * window.innerWidth,
@@ -877,7 +877,7 @@ class Application extends React.Component {
             className="video"
             ref={el => (this.video1Ref = el)}
             style={{
-              bottom: this.state.themeGap / 4,
+              top: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex1
             }}
@@ -987,7 +987,7 @@ class Application extends React.Component {
             className="video"
             ref={el => (this.video1Ref = el)}
             style={{
-              bottom: this.state.themeGap / 4,
+              top: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
@@ -1029,7 +1029,7 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              bottom: this.state.themeGap / 4,
+              top: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -1069,7 +1069,7 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              bottom: this.state.themeGap / 4,
+              top: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -1109,7 +1109,7 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              bottom: this.state.themeGap / 4,
+              top: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -1149,7 +1149,7 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              bottom: this.state.themeGap / 4,
+              t: this.state.themeGap / 4,
               left: this.state.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
