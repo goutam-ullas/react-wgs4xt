@@ -93,6 +93,7 @@ class Application extends React.Component {
       numPages: null,
       pageNumber: 1
     };
+    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.worker.js`;
     /*Bind Functions*/
     this.researchRef = React.createRef();
     this.aboutRef = React.createRef();
@@ -866,7 +867,7 @@ class Application extends React.Component {
             zIndex: 1
           }}
         >
-          <ext className="themeDesc">{this.theme0Desc}</Text>
+          <text className="themeDesc">{this.theme0Desc}</text>
         </div>
         {/*Page 1 Mute Control*/}
         <span
