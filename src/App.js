@@ -74,7 +74,7 @@ class Application extends React.Component {
       popUpColor: "",
       scaleDistance: 13,
       themeDescWidth: "40%",
-      themeDescBottom: 250,
+      themeDescTop : 500
       themeVidLeft: 0.05 * window.innerWidth,
       themeDescLeft: 0.5 * window.innerWidth,
       themeVidRight: 0.29 * window.innerWidth,
@@ -580,8 +580,7 @@ class Application extends React.Component {
     } else {
       this.setState({
         researchWidth: 0,
-        researchBorder: 0,
-
+        researchBorder: 0
       });
     }
   }
@@ -866,7 +865,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s, left 1s"
             }}
@@ -965,7 +964,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, top 1s, left 1s"
             }}
@@ -1019,7 +1018,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s"
             }}
@@ -1059,7 +1058,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s"
             }}
@@ -1099,7 +1098,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s"
             }}
@@ -1139,7 +1138,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              bottom: this.state.themeDescBottom,
+              top: this.state.themeDescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s"
             }}
