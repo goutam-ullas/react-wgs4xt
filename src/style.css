@@ -441,7 +441,7 @@ button:active {
 @font-face {
     font-family: 'Junicode';
     font-weight: regular;
-    src: url"./Assets/Junicode.ttf") format('truetype');
+    src: "./Assets/Junicode.ttf" format('truetype');
 }
 
 *:focus {

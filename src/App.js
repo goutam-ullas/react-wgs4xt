@@ -513,24 +513,11 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == true) {
       this.setState({
-        aboutWidth: window.innerWidth / 2,
-        themeDescBottom: 50,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.05 * window.innerWidth,
-        themeVidRight: window.innerWidth / 21,
-        theme3DescTop: 0.6 * window.innerHeight,
-        theme3VidTop: window.innerHeight / 8,
-        videoDimX1: 1
+        aboutWidth: window.innerWidth / 2
       });
     } else {
       this.setState({
-        aboutWidth: 0,
-        themeDescBottom: 250,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.5 * window.innerWidth,
-        theme3DescTop: window.innerHeight / 4,
-        theme3VidTop: window.innerHeight / 4,
-        themeVidRight: 0.29 * window.innerWidth
+        aboutWidth: 0
       });
     }
   }
@@ -550,26 +537,13 @@ class Application extends React.Component {
     if (this.state.aboutState == false) {
       this.setState({
         aboutWidth: 0,
-        aboutState: true,
-        themeDescBottom: 250,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.5 * window.innerWidth,
-        themeVidRight: window.innerWidth / 21,
-        theme3VidTop: window.innerHeight / 4,
-        theme3DescTop: window.innerHeight / 4,
-        themeVidRight: 0.29 * window.innerWidth
+        aboutState: true
       });
     }
     if (this.state.researchState == false) {
       this.setState({
         researchWidth: 0,
-        researchState: true,
-        themeDescBottom: 250,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.5 * window.innerWidth,
-        theme3DescTop: window.innerHeight / 4,
-        theme3VidTop: window.innerHeight / 4,
-        themeVidRight: 0.29 * window.innerWidth
+        researchState: true
       });
     }
     if (this.state.legendState == true) {
@@ -601,25 +575,13 @@ class Application extends React.Component {
     if (this.state.researchState == true) {
       this.setState({
         researchWidth: window.innerWidth / 2,
-        researchBorder: 50,
-        themeDescBottom: 50,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.05 * window.innerWidth,
-        theme3DescTop: 0.6 * window.innerHeight,
-        theme3VidTop: window.innerHeight / 8,
-        themeVidRight: window.innerWidth / 21,
-        videoDimX1: 1
+        researchBorder: 50
       });
     } else {
       this.setState({
         researchWidth: 0,
         researchBorder: 0,
-        themeDescBottom: 250,
-        themeVidLeft: 0.05 * window.innerWidth,
-        themeDescLeft: 0.5 * window.innerWidth,
-        theme3DescTop: window.innerHeight / 4,
-        theme3VidTop: window.innerHeight / 4,
-        themeVidRight: 0.29 * window.innerWidth
+
       });
     }
   }
