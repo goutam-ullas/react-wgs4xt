@@ -43,7 +43,7 @@ export default function SinglePage(props) {
           <div style={{ display: "inline-block" }}>
             <p
               style={{
-                fontSize: 16,
+                fontSize: 1,
                 fontFamily: "ballinger-mono"
               }}
             >

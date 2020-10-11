@@ -15,8 +15,8 @@ import { faVolumeOff, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
-import { sampleBase64pdf } from "./nThesisBase64pdf";
-
+import AllPagesPDFViewer from "./all-pages";
+import { sampleBase64pdf } from "./nikiBase64pdf";
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm5pa2l0YSIsImEiOiJjazdtYzV2MDYwMzliM2dubnVubnJuMTRrIn0.6KqRhtWgMc_nGwMPAqmstQ";
 
@@ -41,6 +41,7 @@ class Application extends React.Component {
       legendHeight: 0,
       squareText: "",
       circleText: "",
+      themeGap: window.innerHeight,
       videoDimX1: 1,
       videoDimX2: 1,
       videoDimX3: 1,
@@ -72,15 +73,15 @@ class Application extends React.Component {
       popUpColor: "",
       scaleDistance: 13,
       themeDescWidth: "40%",
-      themeVidLeft: 18,
+      themeDescBottom: 250,
+      themeVidLeft: 0.05 * window.innerWidth,
       themeDescLeft: 0.5 * window.innerWidth,
+      themeVidRight: 0.29 * window.innerWidth,
       page1Vis: "visible",
       page2Vis: "hidden",
       page3Vis: "hidden",
       page4Vis: "hidden",
       page5Vis: "hidden",
-      page6Vis: "hidden",
-      page7Vis: "hidden",
       page1Play: true,
       volumeIcon: faVolumeOff,
       page1mute: true,
@@ -89,7 +90,6 @@ class Application extends React.Component {
       numPages: null,
       pageNumber: 1
     };
-    pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.worker.js`;
     /*Bind Functions*/
     this.researchRef = React.createRef();
     this.aboutRef = React.createRef();
@@ -133,11 +133,6 @@ class Application extends React.Component {
       "I particularly identify with his naming of the Ganga pressure cooker; my friend’s mother had the same name and we were close friends. My friend, when she got married, also received an entire Ganga cooking range as a wedding gift. I believe, the groom’s family were quite particular about what gifts they wanted. And me, I’ve never taken a meal without bread made from the wheat flour, Annapurna. As best as I can remember, I did not have a friend by this name, though, my grandmother, a devout lady, prayed without end to the goddess, Annapurna.";
     this.theme3Desc4 =
       "Mr. Gupta is a revered Ad Man, and I’d love to have him sit for a talk. This interview, I strongly believe, will put the rest of the plot into perspective.";
-    this.page4Desc = "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
-    this.page5Desc = "And what of the bride, who reaches her marital home with utensils filled to their brim with grains, evidence of having received good care or upbringing (likely one of those)? Do we see these utensils in the frame? Should we see them? Close-ups, stills or do we see them as they are emptied by those in this home? Utensils filled with grain, gradually emptied. Must we see this to understand the story? ";
-    this.page7Desc = "Also consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
-    
-    this.page6Desc = "The question is, why does the muezzin suddenly follow up his recital with a declaration of his love for India? Or was it a plea? A plea far too big, a distance too remote for this neighborhood minaret to broadcast. And I had been looking for a face, a face most depicting of this fear. But for now, I will have to organize and find within this sound those precise points of nostalgia, power and fear."
   }
   /* Video URLs*/
   theme0Video = "https://player.vimeo.com/video/462185422";
@@ -145,12 +140,11 @@ class Application extends React.Component {
   theme2Video = "https://vimeo.com/448632066/2ab228f98c";
   theme3Video = "https://vimeo.com/448631543/98f339b864";
   theme4Video = "https://vimeo.com/448631454/d006e93a41";
-  theme5Video = "https://vimeo.com/448795035/00689831b4";
-  theme6Video = "https://vimeo.com/448630300/810e46cfce";
-  theme7Video = "https://vimeo.com/454107513/7c4b053989";
-  
-  
-  
+  theme5Video = "https://vimeo.com/454107513/7c4b053989";
+  theme6Video = "https://vimeo.com/448631543/98f339b864";
+  theme7Video = "https://vimeo.com/448630300/810e46cfce";
+  theme8Video = "https://vimeo.com/448630300/810e46cfce";
+
   /* Image URLs */
   theme2Img = "https://i.imgur.com/qaEN8qV.png";
 
@@ -166,7 +160,7 @@ class Application extends React.Component {
   barsColor = "#57858e";
   /* Theme Position Variables*/
   circleState = 0;
-  maxThemes = 6;
+  maxThemes = 4;
   triangleState = false;
 
   /*On Mount*/
@@ -509,11 +503,24 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == true) {
       this.setState({
-        aboutWidth: window.innerWidth / 2
+        aboutWidth: window.innerWidth / 2,
+        themeDescBottom: 50,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.05 * window.innerWidth,
+        themeVidRight: window.innerWidth / 21,
+        theme3DescTop: 0.6 * window.innerHeight,
+        theme3VidTop: window.innerHeight / 8,
+        videoDimX1: 1
       });
     } else {
       this.setState({
-        aboutWidth: 0
+        aboutWidth: 0,
+        themeDescBottom: 250,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.5 * window.innerWidth,
+        theme3DescTop: window.innerHeight / 4,
+        theme3VidTop: window.innerHeight / 4,
+        themeVidRight: 0.29 * window.innerWidth
       });
     }
   }
@@ -533,13 +540,26 @@ class Application extends React.Component {
     if (this.state.aboutState == false) {
       this.setState({
         aboutWidth: 0,
-        aboutState: true
+        aboutState: true,
+        themeDescBottom: 250,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.5 * window.innerWidth,
+        themeVidRight: window.innerWidth / 21,
+        theme3VidTop: window.innerHeight / 4,
+        theme3DescTop: window.innerHeight / 4,
+        themeVidRight: 0.29 * window.innerWidth
       });
     }
     if (this.state.researchState == false) {
       this.setState({
         researchWidth: 0,
-        researchState: true
+        researchState: true,
+        themeDescBottom: 250,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.5 * window.innerWidth,
+        theme3DescTop: window.innerHeight / 4,
+        theme3VidTop: window.innerHeight / 4,
+        themeVidRight: 0.29 * window.innerWidth
       });
     }
     if (this.state.legendState == true) {
@@ -571,12 +591,25 @@ class Application extends React.Component {
     if (this.state.researchState == true) {
       this.setState({
         researchWidth: window.innerWidth / 2,
-        researchBorder: 50
+        researchBorder: 50,
+        themeDescBottom: 50,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.05 * window.innerWidth,
+        theme3DescTop: 0.6 * window.innerHeight,
+        theme3VidTop: window.innerHeight / 8,
+        themeVidRight: window.innerWidth / 21,
+        videoDimX1: 1
       });
     } else {
       this.setState({
         researchWidth: 0,
-        researchBorder: 0
+        researchBorder: 0,
+        themeDescBottom: 250,
+        themeVidLeft: 0.05 * window.innerWidth,
+        themeDescLeft: 0.5 * window.innerWidth,
+        theme3DescTop: window.innerHeight / 4,
+        theme3VidTop: window.innerHeight / 4,
+        themeVidRight: 0.29 * window.innerWidth
       });
     }
   }
@@ -598,7 +631,7 @@ class Application extends React.Component {
     if (this.circleState == 0) {
       this.setState({
         page1Vis: "visible",
-        page7Vis: "hidden",
+        page5Vis: "hidden",
         page1Play: true
       });
     }
@@ -617,12 +650,6 @@ class Application extends React.Component {
     }
     if (this.circleState == 4) {
       this.setState({ page5Vis: "visible", page4Vis: "hidden" });
-    }
-    if (this.circleState == 5) {
-      this.setState({ page6Vis: "visible", page5Vis: "hidden" });
-    }
-    if (this.circleState == 6) {
-      this.setState({ page7Vis: "visible", page6Vis: "hidden" });
     }
   }
   /*When clicked on Prev button*/
@@ -660,14 +687,8 @@ class Application extends React.Component {
       this.setState({ page4Vis: "visible", page5Vis: "hidden" });
     }
     if (this.circleState == 4) {
-      this.setState({ page5Vis: "visible", page6Vis: "hidden" });
-    }
-    if (this.circleState == 5) {
-      this.setState({ page6Vis: "visible", page7Vis: "hidden" });
-    }
-    if (this.circleState == 6) {
       this.setState({
-        page7Vis: "visible",
+        page5Vis: "visible",
         page1Vis: "hidden",
         page1Play: false
       });
@@ -690,8 +711,6 @@ class Application extends React.Component {
         page3Vis: "hidden",
         page4Vis: "hidden",
         page5Vis: "hidden",
-        page6Vis: "hidden",
-        page7Vis: "hidden",
         page1Play: false
       });
     } else {
@@ -713,15 +732,6 @@ class Application extends React.Component {
         this.setState({ page4Vis: "visible" });
       }
       if (this.circleState == 4) {
-        this.setState({ page5Vis: "visible" });
-      }
-      if (this.circleState == 5) {
-        this.setState({ page5Vis: "visible" });
-      }
-      if (this.circleState == 6) {
-        this.setState({ page5Vis: "visible" });
-      }
-      if (this.circleState == 7) {
         this.setState({ page5Vis: "visible" });
       }
     }
@@ -771,7 +781,22 @@ class Application extends React.Component {
     }
   }
 
+  onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setPageNumber(1);
+  }
 
+  changePage(offset) {
+    setPageNumber(prevPageNumber => prevPageNumber + offset);
+  }
+
+  previousPage() {
+    changePage(-1);
+  }
+
+  nextPage() {
+    changePage(1);
+  }
 
   render() {
     return (
@@ -800,10 +825,11 @@ class Application extends React.Component {
         {/*Page 1 Description*/}
         <div
           style={{
+            padding: 50,
             position: "fixed",
             width: 0.3 * this.state.mapWidth,
-            left: 65,
-            top: 0.2 * this.state.mapHeight,
+            left: 18,
+            top: 0.1 * this.state.mapHeight,
             visibility: this.state.page1Vis,
             zIndex: 1
           }}
@@ -841,7 +867,7 @@ class Application extends React.Component {
           }}
         />
 
-        {/* Page 2: Theme 1*/}
+        {/* Page 3: Theme 1*/}
         <div
           style={{
             position: "fixed",
@@ -850,7 +876,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page2Vis
+            visibility: this.state.page3Vis
           }}
         >
           {/*Theme 1 Description*/}
@@ -860,7 +886,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
+              bottom: this.state.themeDescBottom,
               left: this.state.themeDescLeft,
               transition: "width 1s, bottom 1s, left 1s"
             }}
@@ -872,16 +898,18 @@ class Application extends React.Component {
             className="video"
             ref={el => (this.video1Ref = el)}
             style={{
-              top: this.state.mapHeight / 4,
-              left: 0,
-              zIndex: this.state.videoZindex1
+              bottom: this.state.themeGap / 4,
+              zIndex: this.state.videoZindex1,
+              left: this.state.themeVidLeft
             }}
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
             url={this.theme1Video}
             controls={true}
           />
         </div>
 
-        {/*Page 3: Theme 2
+        {/*Page 2: Theme 2*/}
         <div
           style={{
             position: "fixed",
@@ -890,11 +918,11 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page3Vis,
+            visibility: this.state.page2Vis,
             backgroundColor: "transparent"
           }}
-        >*/}
-        {/*Theme 2 - Background image
+        >
+          {/*Theme 2 - Background image*/}
           <img
             style={{
               position: "fixed",
@@ -905,8 +933,8 @@ class Application extends React.Component {
               zIndex: 1
             }}
             src={this.theme2Img}
-          />*/}
-        {/*Theme 2 Description
+          />
+          {/*Theme 2 Description*/}
           <div
             style={{
               padding: 20,
@@ -919,8 +947,8 @@ class Application extends React.Component {
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
-          </div>*/}
-        {/*Theme 2 Video
+          </div>
+          {/*Theme 2 Video*/}
           <ReactPlayer
             className="video"
             style={{
@@ -936,7 +964,7 @@ class Application extends React.Component {
             onPlay={() => this.setState({ videoZindex3: 10 })}
             onPause={() => this.setState({ videoZindex3: 0 })}
           />
-        </div>*/}
+        </div>
 
         {/*Page 4: Theme 3*/}
         <div
@@ -947,7 +975,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page3Vis
+            visibility: this.state.page4Vis
           }}
         >
           {/*Theme 3 Description*/}
@@ -957,7 +985,7 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
+              top: 0.9 * this.state.theme3DescTop,
               left: this.state.themeDescLeft,
               transition: "width 1s, top 1s, left 1s"
             }}
@@ -980,54 +1008,18 @@ class Application extends React.Component {
             className="video"
             ref={el => (this.video1Ref = el)}
             style={{
-              top: this.state.mapHeight / 4,
-              left: this.state.themeVidLeft,
+              top: this.state.theme3VidTop,
               zIndex: this.state.videoZindex1,
+              left: this.state.themeVidLeft,
               transition: "top 1s"
             }}
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
             url={this.theme3Video}
             controls={true}
           />
         </div>
 
-        {/*Page 5: Theme 4*/}
-        <div
-          style={{
-            position: "fixed",
-            pointerEvents: "none",
-            top: 0,
-            left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
-            visibility: this.state.page4Vis
-          }}
-        >
-          {/*Theme 4 Description*/}
-          <div
-            style={{
-              padding: 20,
-              position: "absolute",
-              zIndex: 5,
-              width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
-              left: this.state.themeDescLeft,
-              transition: "width 1s, bottom 1s"
-            }}
-          >
-            <text className="themeDesc">{this.page4Desc}</text>
-          </div>
-          {/*Theme 4 Video 1*/}
-          <ReactPlayer
-            className="video"
-            style={{
-              top: this.state.mapHeight / 4,
-              left: this.state.themeVidLeft,
-              zIndex: this.state.videoZindex4
-            }}
-            url={this.theme4Video}
-            controls={true}
-          />
-        </div>
         {/*Page 5: Theme 4*/}
         <div
           style={{
@@ -1047,104 +1039,67 @@ class Application extends React.Component {
               position: "absolute",
               zIndex: 5,
               width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
-              left: this.state.themeDescLeft,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
-            <text className="themeDesc">{this.page5Desc}</text>
+            <text className="themeDesc">{this.theme2Desc}</text>
           </div>
+          {/*Theme 4 Video 1*/}
+          <ReactPlayer
+            className="video"
+            style={{
+              top: this.state.mapHeight / 5,
+              zIndex: this.state.videoZindex4,
+              left: this.state.themeVidLeft
+            }}
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
+            url={this.theme4Video}
+            controls={true}
+          />
           {/*Theme 4 Video 2*/}
           <ReactPlayer
             className="video"
             style={{
-              top: this.state.mapHeight / 4,
-              left: this.state.themeVidLeft,
-              zIndex: this.state.videoZindex4
+              top: this.state.mapHeight / 2,
+              zIndex: this.state.videoZindex4,
+              left: 5 * this.state.themeVidLeft
             }}
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
             url={this.theme5Video}
             controls={true}
           />
-        </div>
-        {/*Page 5: Theme 4*/}
-        <div
-          style={{
-            position: "fixed",
-            pointerEvents: "none",
-            top: 0,
-            left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
-            visibility: this.state.page6Vis
-          }}
-        >
-          {/*Theme 4 Description*/}
-          <div
-            style={{
-              padding: 20,
-              position: "absolute",
-              zIndex: 5,
-              width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
-              left: this.state.themeDescLeft,
-              transition: "width 1s, bottom 1s"
-            }}
-          >
-            <text className="themeDesc">{this.page6Desc}</text>
-          </div>
           {/*Theme 4 Video 3*/}
           <ReactPlayer
             className="video"
             style={{
-              top: this.state.mapHeight / 4,
-              left: this.state.themeVidLeft,
-              zIndex: this.state.videoZindex4
+              top: this.state.mapHeight / 5,
+              zIndex: this.state.videoZindex4,
+              left: 10 * this.state.themeVidLeft
             }}
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
             url={this.theme6Video}
             controls={true}
           />
-        </div>
-        {/*Page 5: Theme 4*/}
-        <div
-          style={{
-            position: "fixed",
-            pointerEvents: "none",
-            top: 0,
-            left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
-            visibility: this.state.page7Vis
-          }}
-        >
-          {/*Theme 4 Description*/}
-          <div
-            style={{
-              padding: 20,
-              position: "absolute",
-              zIndex: 5,
-              width: this.state.themeDescWidth,
-              top: this.state.mapHeight/3,
-              left: this.state.themeDescLeft,
-              transition: "width 1s, bottom 1s"
-            }}
-          >
-            <text className="themeDesc">{this.page7Desc}</text>
-          </div>
           {/*Theme 4 Video 4*/}
           <ReactPlayer
             className="video"
             style={{
-              top: this.state.mapHeight / 4,
-              left: this.state.themeVidLeft,
-              zIndex: this.state.videoZindex4
+              top: this.state.mapHeight / 2,
+              zIndex: this.state.videoZindex4,
+              left: 15 * this.state.themeVidLeft
             }}
-
+            height={this.state.videoHeight}
+            width={this.state.videoWidth}
             url={this.theme7Video}
             controls={true}
           />
         </div>
         {/*Title Bar*/}
-        <div className="titlebar" style={{ top: -10, width: 600, height: 50, zIndex: 10 }}>
+        <div className="titlebar" style={{ top: -10, width: 600, zIndex: 10 }}>
           <Typekit kitId="bor7jxc" />
           {/*Home Button*/}
           <span
@@ -1601,16 +1556,14 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          <div
-            style={{ position: "absolute", right: this.state.mapWidth / 12 }}
-          >
+          <div style={{position: "absolute",right:this.state.mapWidth/15}}>
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
-              height={this.state.mapHeight - 90}
+              height={this.state.mapHeight - 60}
               pdf={sampleBase64pdf}
             />
+            </div>
           </div>
-        </div>
         {/*Map Dots PopUps*/}
         <div>
           <text
