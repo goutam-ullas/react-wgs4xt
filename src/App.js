@@ -781,22 +781,7 @@ class Application extends React.Component {
     }
   }
 
-  onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
-  }
 
-  changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
-  }
-
-  previousPage() {
-    changePage(-1);
-  }
-
-  nextPage() {
-    changePage(1);
-  }
 
   render() {
     return (
