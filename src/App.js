@@ -1142,7 +1142,6 @@ class Application extends React.Component {
             }}
 
             url={this.theme7Video}
-
             controls={true}
           />
         </div>
