@@ -326,7 +326,7 @@ button[aria-label][data-balloon-pos] {
 }
 
 .about {
-font-family: 'Junicode';
+font-family: kazimirtext, sans-serif;
 font-size: 18px;
 color: white;
 position: fixed;
@@ -381,7 +381,7 @@ display:inline;
   background-color: white;
   color: #000000;
   align-self: "flex-start";
-  font-family: kazimirtext, sans-serif;;
+  font-family: kazimirtext, sans-serif;
   font-size: 16px;
 }
 
@@ -435,13 +435,6 @@ button:focus {
 
 button:active {
     transform: scale(0.99);
-}
-
-
-@font-face {
-    font-family: 'Junicode';
-    font-weight: regular;
-    src: "./Assets/Junicode.ttf" format('truetype');
 }
 
 *:focus {
