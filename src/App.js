@@ -879,7 +879,6 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex1
             }}
             url={this.theme1Video}
-            width = "100%"
             controls={true}
           />
         </div>
@@ -989,7 +988,6 @@ class Application extends React.Component {
               transition: "top 1s"
             }}
             url={this.theme3Video}
-            width = "100%"
             controls={true}
           />
         </div>
@@ -1029,7 +1027,6 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
-            width = "100%"
             controls={true}
           />
         </div>
@@ -1068,7 +1065,6 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme5Video}
-            width = "100%"
             controls={true}
           />
         </div>
@@ -1107,7 +1103,6 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme6Video}
-            width = "100%"
             controls={true}
           />
         </div>
@@ -1147,7 +1142,7 @@ class Application extends React.Component {
             }}
 
             url={this.theme7Video}
-            
+
             controls={true}
           />
         </div>
