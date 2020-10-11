@@ -1606,7 +1606,7 @@ class Application extends React.Component {
           >
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
-              height={this.state.mapHeight - 120}
+              height={this.state.mapHeight - 9}
               pdf={sampleBase64pdf}
             />
           </div>
