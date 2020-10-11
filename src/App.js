@@ -1603,11 +1603,11 @@ class Application extends React.Component {
             &#10005;
           </span>
           <div
-            style={{ position: "absolute", right: this.state.mapWidth / 15 }}
+            style={{ position: "absolute", right: this.state.mapWidth / 1 }}
           >
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
-              height={this.state.mapHeight - 60}
+              height={this.state.mapHeight - 90}
               pdf={sampleBase64pdf}
             />
           </div>
