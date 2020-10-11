@@ -73,7 +73,7 @@ class Application extends React.Component {
       popUpColor: "",
       scaleDistance: 13,
       themeDescWidth: "40%",
-      themeVidLeft: 0.0 * window.innerWidth,
+      themeVidLeft: 18,
       themeDescLeft: 0.5 * window.innerWidth,
       page1Vis: "visible",
       page2Vis: "hidden",
