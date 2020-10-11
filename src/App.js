@@ -15,7 +15,7 @@ import { faVolumeOff, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
-import { sampleBase64pdf } from "./nthesisBase64pdf";
+import { sampleBase64pdf } from "./nThesisBase64pdf";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm5pa2l0YSIsImEiOiJjazdtYzV2MDYwMzliM2dubnVubnJuMTRrIn0.6KqRhtWgMc_nGwMPAqmstQ";
@@ -800,11 +800,10 @@ class Application extends React.Component {
         {/*Page 1 Description*/}
         <div
           style={{
-            padding: 50,
             position: "fixed",
             width: 0.3 * this.state.mapWidth,
-            left: 18,
-            top: 0.1 * this.state.mapHeight,
+            left: 65,
+            top: 0.2 * this.state.mapHeight,
             visibility: this.state.page1Vis,
             zIndex: 1
           }}
@@ -1145,7 +1144,7 @@ class Application extends React.Component {
           />
         </div>
         {/*Title Bar*/}
-        <div className="titlebar" style={{ top: -10, width: 600, zIndex: 10 }}>
+        <div className="titlebar" style={{ top: -10, width: 600, height: 50, zIndex: 10 }}>
           <Typekit kitId="bor7jxc" />
           {/*Home Button*/}
           <span
