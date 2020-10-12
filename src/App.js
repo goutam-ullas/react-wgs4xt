@@ -540,7 +540,7 @@ class Application extends React.Component {
       });
     }
     if (this.state.legendState == true) {
-      this.setState({ legendHeight: window.innerHeight / 5 });
+      this.setState({ legendHeight: window.innerHeight / 8 });
       var legendId = document.getElementById("legendWindow");
       legendId.scrollTop = 0;
     } else {
@@ -597,8 +597,7 @@ class Application extends React.Component {
         page1Vis: "visible",
         page8Vis: "hidden",
         page2Vis: "hidden",
-        page1Play: true,
-
+        page1Play: true
       });
     }
     if (this.circleState == 1) {
@@ -1304,7 +1303,7 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.legendFunction}
             style={{
-              fontSize: 22,
+              fontSize: 16,
               position: "fixed",
               marginLeft: 10,
               marginTop: 10,
@@ -1317,7 +1316,7 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Left*/}
           <div
             style={{
-              marginTop: 20,
+              marginTop: 1,
               marginLeft: 50,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
@@ -1436,7 +1435,7 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Right*/}
           <div
             style={{
-              marginTop: 20,
+              marginTop: 5,
               marginLeft: 100,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
