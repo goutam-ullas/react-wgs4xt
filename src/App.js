@@ -540,7 +540,7 @@ class Application extends React.Component {
       });
     }
     if (this.state.legendState == true) {
-      this.setState({ legendHeight: window.innerHeight / 6.7 });
+      this.setState({ legendHeight: window.innerHeight / 6. });
       var legendId = document.getElementById("legendWindow");
       legendId.scrollTop = 0;
     } else {
