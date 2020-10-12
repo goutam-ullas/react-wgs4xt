@@ -509,7 +509,7 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == true) {
       this.setState({
-        aboutWidth: window.innerWidth / 2
+        aboutWidth: 0.405*this.state.mapWidth
       });
     } else {
       this.setState({
@@ -570,7 +570,7 @@ class Application extends React.Component {
     }
     if (this.state.researchState == true) {
       this.setState({
-        researchWidth: window.innerWidth / 2,
+        researchWidth: 0.405*this.state.mapWidth,
         researchBorder: 50
       });
     } else {
@@ -766,7 +766,7 @@ class Application extends React.Component {
     if (searchParams.get("query") == "research") {
       this.setState({
         researchState: false,
-        researchWidth: window.innerWidth / 2
+        researchWidth: 0.405*this.state.mapWidth
       });
     }
   }
@@ -1316,7 +1316,7 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.aboutFunction}
             style={{
-              fontSize: 22,
+              fontSize: 16,
               position: "absolute",
               marginLeft: 10,
               marginTop: 10,
@@ -1327,7 +1327,7 @@ class Application extends React.Component {
             &#10005;
           </span>
           {/*About Window - Text Content*/}
-          <p style={{ margin: 50 }}> {this.aboutText} </p>
+          <p style={{ fontSize: 16, margin: 50 }}> {this.aboutText} </p>
         </div>
         {/*Legend Window*/}
         <div
@@ -1591,7 +1591,7 @@ class Application extends React.Component {
             aria-label=""
             onClick={this.researchFunction}
             style={{
-              fontSize: 22,
+              fontSize: 1,
               position: "fixed",
               marginTop: 10,
               marginLeft: 10,
@@ -1602,7 +1602,7 @@ class Application extends React.Component {
             &#10005;
           </span>
           <div
-            style={{ position: "absolute", right: this.state.mapWidth / 12 }}
+            style={{ position: "absolute", right: this.state.mapWidth / 30 }}
           >
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
