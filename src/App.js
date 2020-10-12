@@ -84,8 +84,7 @@ class Application extends React.Component {
       volumeIcon: faVolumeOff,
       page1mute: true,
       theme3DescTop: window.innerHeight / 4,
-      theme3VidTop: window.innerHeight / 4,
-      mapbg: "transparent"
+      theme3VidTop: window.innerHeight / 4
     };
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.worker.js`;
     /*Bind Functions*/
@@ -162,7 +161,6 @@ class Application extends React.Component {
   toysColor = "#4971a2";
   plasticColor = "#8f7f56";
   barsColor = "#57858e";
-  mapColor = "#c2e0d5";
   /* Theme Position Variables*/
   circleState = 0;
   maxThemes = 7;
@@ -600,34 +598,33 @@ class Application extends React.Component {
         page8Vis: "hidden",
         page2Vis: "hidden",
         page1Play: true,
-        mapbg: "transparent"
+
       });
     }
     if (this.circleState == 1) {
       this.setState({
         page2Vis: "visible",
         page1Vis: "visible",
-        page1Play: true,
-        mapbg: "transparent"
+        page1Play: true
       });
     }
     if (this.circleState == 2) {
-      this.setState({ page3Vis: "visible", page2Vis: "hidden", page1Vis: "hidden", page1Play:false, mapbg: this.mapColor });
+      this.setState({ page3Vis: "visible", page2Vis: "hidden", page1Vis: "hidden", page1Play:false });
     }
     if (this.circleState == 3) {
-      this.setState({ page4Vis: "visible", page3Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page4Vis: "visible", page3Vis: "hidden" });
     }
     if (this.circleState == 4) {
-      this.setState({ page5Vis: "visible", page4Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page5Vis: "visible", page4Vis: "hidden" });
     }
     if (this.circleState == 5) {
-      this.setState({ page6Vis: "visible", page5Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page6Vis: "visible", page5Vis: "hidden" });
     }
     if (this.circleState == 6) {
-      this.setState({ page7Vis: "visible", page6Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page7Vis: "visible", page6Vis: "hidden" });
     }
         if (this.circleState == 7) {
-      this.setState({ page8Vis: "visible", page7Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page8Vis: "visible", page7Vis: "hidden" });
     }
   }
   /*When clicked on Prev button*/
@@ -649,8 +646,7 @@ class Application extends React.Component {
       this.setState({
         page1Vis: "visible",
         page2Vis: "hidden",
-        page1Play: true,
-        mapbg: "transparent"
+        page1Play: true
       });
     }
     if (this.circleState == 1) {
@@ -658,31 +654,29 @@ class Application extends React.Component {
         page2Vis: "visible",
         page1Vis: "visible",
         page1Play: true,
-        page3Vis: "hidden",
-        mapbg: "transparent"
+        page3Vis: "hidden"
       });
     }
     if (this.circleState == 2) {
-      this.setState({ page3Vis: "visible", page4Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page3Vis: "visible", page4Vis: "hidden"});
     }
     if (this.circleState == 3) {
-      this.setState({ page4Vis: "visible", page5Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page4Vis: "visible", page5Vis: "hidden"});
     }
     if (this.circleState == 4) {
-      this.setState({ page5Vis: "visible", page6Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page5Vis: "visible", page6Vis: "hidden"});
     }
     if (this.circleState == 5) {
-      this.setState({ page6Vis: "visible", page7Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page6Vis: "visible", page7Vis: "hidden"});
     }
         if (this.circleState == 6) {
-      this.setState({ page7Vis: "visible", page8Vis: "hidden", mapbg: this.mapColor });
+      this.setState({ page7Vis: "visible", page8Vis: "hidden"});
     }
     if (this.circleState == 7) {
       this.setState({
         page8Vis: "visible",
         page1Vis: "hidden",
-        page1Play: false,
-        mapbg: this.mapColor
+        page1Play: false
       });
     }
   }
@@ -790,7 +784,7 @@ class Application extends React.Component {
   render() {
     return (
       /*Main Div*/
-      <div style = {{backgroundColor"#c2e0d5"}}>
+      <div>
       {/*Background*/}
         {/*Page 1*/}
         {/*Page 1 Video*/}
@@ -851,7 +845,7 @@ class Application extends React.Component {
             top: 0,
             height: this.state.mapHeight,
             width: this.state.mapWidth,
-            backgroundColor: this.state.mapbg
+            backgroundColor: "transparent"
           }}
         />
 
