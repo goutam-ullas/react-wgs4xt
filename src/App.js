@@ -540,7 +540,7 @@ class Application extends React.Component {
       });
     }
     if (this.state.legendState == true) {
-      this.setState({ legendHeight: window.innerHeight / 8 });
+      this.setState({ legendHeight: window.innerHeight / 7 });
       var legendId = document.getElementById("legendWindow");
       legendId.scrollTop = 0;
     } else {
@@ -1316,7 +1316,7 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Left*/}
           <div
             style={{
-              marginTop: 1,
+              marginTop: 5,
               marginLeft: 50,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
