@@ -790,7 +790,8 @@ class Application extends React.Component {
   render() {
     return (
       /*Main Div*/
-      <div>
+      <div style = {{backgroundColor"#c2e0d5"}}>
+      {/*Background*/}
         {/*Page 1*/}
         {/*Page 1 Video*/}
         <ReactPlayer
@@ -799,7 +800,6 @@ class Application extends React.Component {
             top: 0,
             left: -0.1 * this.state.mapWidth,
             visibility: this.state.page1Vis,
-            transition: "width 1s, height 1s, left 1s",
             zIndex: 0
           }}
           url={this.theme0Video}
