@@ -73,7 +73,7 @@ class Application extends React.Component {
       scaleDistance: 13,
       themeDescWidth: "30%",
       themeVidLeft: 18,
-      themeDescLeft: 0.5 * window.innerWidth,
+      themeDescLeft: 0.7 * window.innerWidth,
       page1Vis: "visible",
       page2Vis: "hidden",
       page3Vis: "hidden",
@@ -81,13 +81,12 @@ class Application extends React.Component {
       page5Vis: "hidden",
       page6Vis: "hidden",
       page7Vis: "hidden",
+      page8Vis: "hidden",
       page1Play: true,
       volumeIcon: faVolumeOff,
       page1mute: true,
       theme3DescTop: window.innerHeight / 4,
-      theme3VidTop: window.innerHeight / 4,
-      numPages: null,
-      pageNumber: 1
+      theme3VidTop: window.innerHeight / 4
     };
     pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.worker.js`;
     /*Bind Functions*/
@@ -166,7 +165,7 @@ class Application extends React.Component {
   barsColor = "#57858e";
   /* Theme Position Variables*/
   circleState = 0;
-  maxThemes = 6;
+  maxThemes = 7;
   triangleState = false;
 
   /*On Mount*/
@@ -598,19 +597,20 @@ class Application extends React.Component {
     if (this.circleState == 0) {
       this.setState({
         page1Vis: "visible",
-        page7Vis: "hidden",
+        page8Vis: "hidden",
+        page2Vis: "hidden",
         page1Play: true
       });
     }
     if (this.circleState == 1) {
       this.setState({
         page2Vis: "visible",
-        page1Vis: "hidden",
-        page1Play: false
+        page1Vis: "visible",
+        page1Play: true
       });
     }
     if (this.circleState == 2) {
-      this.setState({ page3Vis: "visible", page2Vis: "hidden" });
+      this.setState({ page3Vis: "visible", page2Vis: "hidden", page1Vis: "hidden", page1Play:false });
     }
     if (this.circleState == 3) {
       this.setState({ page4Vis: "visible", page3Vis: "hidden" });
@@ -623,6 +623,9 @@ class Application extends React.Component {
     }
     if (this.circleState == 6) {
       this.setState({ page7Vis: "visible", page6Vis: "hidden" });
+    }
+        if (this.circleState == 7) {
+      this.setState({ page8Vis: "visible", page7Vis: "hidden" });
     }
   }
   /*When clicked on Prev button*/
@@ -650,6 +653,8 @@ class Application extends React.Component {
     if (this.circleState == 1) {
       this.setState({
         page2Vis: "visible",
+        page1Vis: "visible",
+        page1Play: true,
         page3Vis: "hidden"
       });
     }
@@ -665,9 +670,12 @@ class Application extends React.Component {
     if (this.circleState == 5) {
       this.setState({ page6Vis: "visible", page7Vis: "hidden" });
     }
-    if (this.circleState == 6) {
+        if (this.circleState == 6) {
+      this.setState({ page7Vis: "visible", page8Vis: "hidden" });
+    }
+    if (this.circleState == 7) {
       this.setState({
-        page7Vis: "visible",
+        page8Vis: "visible",
         page1Vis: "hidden",
         page1Play: false
       });
@@ -692,6 +700,7 @@ class Application extends React.Component {
         page5Vis: "hidden",
         page6Vis: "hidden",
         page7Vis: "hidden",
+        page8Vis: "hidden",
         page1Play: false
       });
     } else {
@@ -804,7 +813,7 @@ class Application extends React.Component {
             width: 0.3 * this.state.mapWidth,
             left: 65,
             top: 0.2 * this.state.mapHeight,
-            visibility: this.state.page1Vis,
+            visibility: this.state.page2Vis,
             zIndex: 1
           }}
         >
@@ -850,7 +859,7 @@ class Application extends React.Component {
             top:0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page2Vis
+            visibility: this.state.page3Vis
           }}
         >
           {/*Theme 1 Description*/}
@@ -891,7 +900,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page3Vis
+            visibility: this.state.page4Vis
           }}
         >
           {/*Theme 3 Description*/}
@@ -944,7 +953,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page4Vis
+            visibility: this.state.page5Vis
           }}
         >
           {/*Theme 4 Description*/}
@@ -983,7 +992,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page5Vis
+            visibility: this.state.page6Vis
           }}
         >
           {/*Theme 4 Description*/}
@@ -1022,7 +1031,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page6Vis
+            visibility: this.state.page7Vis
           }}
         >
           {/*Theme 4 Description*/}
@@ -1061,7 +1070,7 @@ class Application extends React.Component {
             left: 0,
             height: window.innerHeight,
             width: window.innerWidth,
-            visibility: this.state.page7Vis
+            visibility: this.state.page8Vis
           }}
         >
           {/*Theme 4 Description*/}
@@ -1072,7 +1081,7 @@ class Application extends React.Component {
               top: this.state.mapHeight/5,
               zIndex: 5,
               width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft ,
+              left: this.state.themeDescLeft + 35,
               transition: "width 1s, bottom 1s"
             }}
           >
