@@ -71,9 +71,8 @@ class Application extends React.Component {
       popUpPad: 0,
       popUpColor: "",
       scaleDistance: 13,
-      themeDescWidth: "30%",
+
       themeVidLeft: 18,
-      themeDescLeft: 0.7 * window.innerWidth,
       page1Vis: "visible",
       page2Vis: "hidden",
       page3Vis: "hidden",
@@ -869,8 +868,8 @@ class Application extends React.Component {
               position: "absolute",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, bottom 1s, left 1s"
             }}
           >
@@ -910,8 +909,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft + 50,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, top 1s, left 1s"
             }}
           >
@@ -963,8 +962,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft - 150,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -1002,8 +1001,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft + 35,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -1041,8 +1040,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -1080,8 +1079,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: this.state.mapHeight/5,
               zIndex: 5,
-              width: this.state.themeDescWidth,
-              left: this.state.themeDescLeft + 35,
+              width: 0.3*this.state.mapWidth,
+              left: 0.65*this.state.mapWidth,
               transition: "width 1s, bottom 1s"
             }}
           >
