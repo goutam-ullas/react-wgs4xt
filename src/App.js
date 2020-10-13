@@ -800,8 +800,8 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             top: "20%",
-            width: "40%",
-            left: "50%",
+            width: this.themeDescWidth,
+            left: this.themeDescLeft,
             visibility: this.state.page2Vis,
             zIndex: 1
           }}
@@ -1050,8 +1050,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme6Video}
-            width = "40%"
-            height = "45%"
+            width = {580}
+            height = {360}
             controls={true}
           />
         </div>
