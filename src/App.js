@@ -492,7 +492,7 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == true) {
       this.setState({
-        aboutWidth: "40%"
+        aboutWidth: "40.5%"
       });
     } else {
       this.setState({
@@ -555,7 +555,7 @@ class Application extends React.Component {
     }
     if (this.state.researchState == true) {
       this.setState({
-        researchWidth: "40%",
+        researchWidth: "40.5%",
         researchBorder: 50
       });
     } else {
@@ -763,7 +763,7 @@ class Application extends React.Component {
     if (searchParams.get("query") == "research") {
       this.setState({
         researchState: false,
-        researchWidth: "40%"
+        researchWidth: "40.%"
       });
     }
   }
