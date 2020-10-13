@@ -55,7 +55,6 @@ class Application extends React.Component {
       popUpPad: 0,
       popUpColor: "",
       scaleDistance: 13,
-      themeVidLeft: 18,
       page1Vis: "visible",
       page2Vis: "hidden",
       page3Vis: "hidden",
@@ -145,10 +144,13 @@ class Application extends React.Component {
   toysColor = "#4971a2";
   plasticColor = "#8f7f56";
   barsColor = "#57858e";
+
   /* Theme Position Variables*/
   circleState = 0;
   maxThemes = 7;
   triangleState = false;
+  themeDescLeft = "60%";
+  themeVidLeft= 65;
 
   /*On Mount*/
   componentDidMount() {
@@ -797,8 +799,8 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             top: "20%",
-            width: "30%",
-            left: "65%",
+            width: "40%",
+            left: "50%",
             visibility: this.state.page2Vis,
             zIndex: 1
           }}
@@ -855,8 +857,8 @@ class Application extends React.Component {
               position: "absolute",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">{this.theme1Desc}</text>
@@ -868,7 +870,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex1
             }}
             url={this.theme1Video}
@@ -897,8 +899,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">
@@ -921,7 +923,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
             }}
@@ -951,8 +953,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">{this.page4Desc}</text>
@@ -963,7 +965,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
@@ -991,8 +993,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">{this.page5Desc}</text>
@@ -1003,7 +1005,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
             url={this.theme5Video}
@@ -1029,8 +1031,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">{this.page6Desc}</text>
@@ -1041,7 +1043,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
             url={this.theme6Video}
@@ -1069,8 +1071,8 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "30%",
-              left: "65%"
+              width: "40%",
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">{this.page7Desc}</text>
@@ -1081,7 +1083,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               top: "20%",
-              left: "4.5%",
+              left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
             url={this.theme7Video}
