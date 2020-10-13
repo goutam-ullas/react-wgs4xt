@@ -764,7 +764,9 @@ class Application extends React.Component {
     if (searchParams.get("query") == "research") {
       this.setState({
         researchState: false,
-        researchWidth: "40.5%"
+        researchWidth: "40.5%",
+        legendState: true,
+        legendHeight:
       });
     }
   }
