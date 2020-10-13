@@ -763,7 +763,7 @@ class Application extends React.Component {
     if (searchParams.get("query") == "research") {
       this.setState({
         researchState: false,
-        researchWidth: "40.%"
+        researchWidth: "40.5%"
       });
     }
   }
@@ -874,8 +874,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex1
             }}
             url={this.theme1Video}
-            width = "40%"
-            height = "45%"
+            width = {585}
+            height = {360}
             controls={true}
           />
         </div>
@@ -927,8 +927,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
             }}
-            width = "40%"
-            height = "45%"
+            width = {585}
+            height = {360}
             url={this.theme3Video}
             controls={true}
           />
@@ -969,8 +969,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
-            width = "30%"
-            height = "45%"
+            width = {420}
+            height = {360}
             controls={true}
           />
         </div>
@@ -1008,6 +1008,8 @@ class Application extends React.Component {
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
+            width = {6}
+            height = {360}
             url={this.theme5Video}
             controls={true}
           />
@@ -1087,6 +1089,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme7Video}
+            width = {585}
+            height = {360}            
             controls={true}
           />
         </div>
