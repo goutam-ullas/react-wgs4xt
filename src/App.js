@@ -796,9 +796,9 @@ class Application extends React.Component {
         <div
           style={{
             position: "fixed",
-            width: 0.3 * this.state.mapWidth,
-            left: 65,
-            top: 0.2 * this.state.mapHeight,
+            top: "20%",
+            width: "30%",
+            left: "65%",
             visibility: this.state.page2Vis,
             zIndex: 1
           }}
@@ -885,8 +885,8 @@ class Application extends React.Component {
             pointerEvents: "none",
             top: 0,
             left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page4Vis
           }}
         >
@@ -895,11 +895,10 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, top 1s, left 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">
@@ -921,11 +920,13 @@ class Application extends React.Component {
             ref={el => (this.video1Ref = el)}
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: 65,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
             }}
+            width = "40%"
+            height = "45%"
             url={this.theme3Video}
             controls={true}
           />
@@ -936,10 +937,10 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             pointerEvents: "none",
-            top: 0,
             left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
+            top:0,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page5Vis
           }}
         >
@@ -948,11 +949,10 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, bottom 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">{this.page4Desc}</text>
@@ -962,11 +962,13 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: -35,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
+            width = "30%"
+            height = "45%"
             controls={true}
           />
         </div>
@@ -975,10 +977,10 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             pointerEvents: "none",
-            top: 0,
             left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
+            top:0,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page6Vis
           }}
         >
@@ -987,11 +989,10 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, bottom 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">{this.page5Desc}</text>
@@ -1001,8 +1002,8 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: 70,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex4
             }}
             url={this.theme5Video}
@@ -1014,10 +1015,10 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             pointerEvents: "none",
-            top: 0,
             left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
+            top:0,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page7Vis
           }}
         >
@@ -1026,11 +1027,10 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, bottom 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">{this.page6Desc}</text>
@@ -1040,11 +1040,13 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: 35,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex4
             }}
             url={this.theme6Video}
+            width = "40%"
+            height = "45%"
             controls={true}
           />
         </div>
@@ -1053,10 +1055,10 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             pointerEvents: "none",
-            top: 0,
             left: 0,
-            height: window.innerHeight,
-            width: window.innerWidth,
+            top:0,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page8Vis
           }}
         >
@@ -1065,11 +1067,10 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, bottom 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">{this.page7Desc}</text>
@@ -1079,11 +1080,10 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: 70,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex4
             }}
-
             url={this.theme7Video}
             controls={true}
           />
