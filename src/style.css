@@ -344,7 +344,8 @@ position: fixed;
 display:  flex;
 left: 0;
 bottom: 0;
-background-color: #fd3217;
+background-image: linear-gradient(to right, #fd3217 , #cca683);
+filter: drop-shadow(0 0 30px #333);
 overflow:scroll;
 transition: height 0.5s;
 }

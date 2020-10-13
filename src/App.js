@@ -1,5 +1,5 @@
 /*imports*/
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import {
   SliderInput,
   SliderTrack,
@@ -540,7 +540,7 @@ class Application extends React.Component {
       });
     }
     if (this.state.legendState == true) {
-      this.setState({ legendHeight: window.innerHeight / 6. });
+      this.setState({ legendHeight: window.innerHeight / 6.6 });
       var legendId = document.getElementById("legendWindow");
       legendId.scrollTop = 0;
     } else {
