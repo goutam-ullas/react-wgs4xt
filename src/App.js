@@ -766,7 +766,7 @@ class Application extends React.Component {
         researchState: false,
         researchWidth: "40.5%",
         legendState: true,
-        legendHeight:
+        legendHeight: 0
       });
     }
   }
