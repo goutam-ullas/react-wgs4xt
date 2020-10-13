@@ -37,26 +37,10 @@ class Application extends React.Component {
       researchState: true,
       researchWidth: 0,
       researchBorder: 0,
-      legendState: true,
-      legendHeight: 0,
+      legendState: false,
+      legendHeight: "15%",
       squareText: "",
       circleText: "",
-      videoDimX1: 1,
-      videoDimX2: 1,
-      videoDimX3: 1,
-      videoDimX4: 1,
-      videoDimX5: 1,
-      videoDimX6: 1,
-      videoDimX7: 1,
-      videoDimX8: 1,
-      videoZindex1: 1,
-      videoZindex2: 1,
-      videoZindex3: 0,
-      videoZindex4: 1,
-      videoZindex5: 1,
-      videoZindex6: 1,
-      videoZindex7: 1,
-      videoZindex8: 1,
       videoHeight: 0.4 * window.innerHeight,
       videoWidth: 0.4 * window.innerWidth,
       imageDimX1: 0,
@@ -506,11 +490,13 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == true) {
       this.setState({
-        aboutWidth: 0.405*this.state.mapWidth
+        aboutWidth: "40%"
       });
     } else {
       this.setState({
-        aboutWidth: 0
+        aboutWidth: 0,
+        legendHeight: "15%", 
+        legendState: false
       });
     }
   }
@@ -540,7 +526,7 @@ class Application extends React.Component {
       });
     }
     if (this.state.legendState == true) {
-      this.setState({ legendHeight: window.innerHeight / 6.6 });
+      this.setState({ legendHeight: "15%" });
       var legendId = document.getElementById("legendWindow");
       legendId.scrollTop = 0;
     } else {
@@ -567,13 +553,15 @@ class Application extends React.Component {
     }
     if (this.state.researchState == true) {
       this.setState({
-        researchWidth: 0.405*this.state.mapWidth,
+        researchWidth: "40%",
         researchBorder: 50
       });
     } else {
       this.setState({
         researchWidth: 0,
-        researchBorder: 0
+        researchBorder: 0,
+        legendHeight: "15%", 
+        legendState: false
       });
     }
   }
@@ -773,7 +761,7 @@ class Application extends React.Component {
     if (searchParams.get("query") == "research") {
       this.setState({
         researchState: false,
-        researchWidth: 0.405*this.state.mapWidth
+        researchWidth: "40%"
       });
     }
   }
@@ -842,8 +830,8 @@ class Application extends React.Component {
             left: 0,
             right: 0,
             top: 0,
-            height: this.state.mapHeight,
-            width: this.state.mapWidth,
+            height: "100%",
+            width: "100%",
             backgroundColor: "transparent"
           }}
         />
@@ -855,8 +843,8 @@ class Application extends React.Component {
             pointerEvents: "none",
             left: 0,
             top:0,
-            height: this.state.mapHeight,
-            width: this.state.mapWidth,
+            height: "100%",
+            width: "100%",
             visibility: this.state.page3Vis
           }}
         >
@@ -865,11 +853,10 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               position: "absolute",
-              top: this.state.mapHeight/5,
+              top: "20%",
               zIndex: 5,
-              width: 0.3*this.state.mapWidth,
-              left: 0.65*this.state.mapWidth,
-              transition: "width 1s, bottom 1s, left 1s"
+              width: "30%",
+              left: "65%"
             }}
           >
             <text className="themeDesc">{this.theme1Desc}</text>
@@ -880,11 +867,13 @@ class Application extends React.Component {
             ref={el => (this.video1Ref = el)}
             style={{
               display: "inline-block",
-              top: this.state.mapHeight/5,
-              left: 35,
+              top: "20%",
+              left: "4.5%",
               zIndex: this.state.videoZindex1
             }}
             url={this.theme1Video}
+            width = "40%"
+            height = "45%"
             controls={true}
           />
         </div>
