@@ -387,6 +387,11 @@ display:inline;
   align-self: "flex-start";
   font-family: kazimirtext, sans-serif;
   font-size: 16px;
+  overflow: scroll;
+}
+
+.desc {
+overflow: scroll;
 }
 
 .legendDot {

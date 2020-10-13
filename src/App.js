@@ -859,7 +859,7 @@ class Application extends React.Component {
               display: "inline-block",
               position: "absolute",
               top: "20%",
-              zIndex: 5,
+
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -899,11 +899,10 @@ class Application extends React.Component {
           <div
             style={{
               position: "absolute",
-              display: "inline-block",
               top: "20%",
-              zIndex: 5,
               width: this.themeDescWidth,
-              left: this.themeDescLeft
+              left: this.themeDescLeft,
+              overflow:"scroll"
             }}
           >
             <text className="themeDesc">
@@ -955,7 +954,6 @@ class Application extends React.Component {
               position: "absolute",
               display: "inline-block",
               top: "20%",
-              zIndex: 5,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -995,7 +993,6 @@ class Application extends React.Component {
               position: "absolute",
               display: "inline-block",
               top: "20%",
-              zIndex: 5,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -1035,7 +1032,6 @@ class Application extends React.Component {
               position: "absolute",
               display: "inline-block",
               top: "20%",
-              zIndex: 5,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -1075,7 +1071,6 @@ class Application extends React.Component {
               position: "absolute",
               display: "inline-block",
               top: "20%",
-              zIndex: 5,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
