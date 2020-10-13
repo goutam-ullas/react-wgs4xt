@@ -150,6 +150,7 @@ class Application extends React.Component {
   maxThemes = 7;
   triangleState = false;
   themeDescLeft = "60%";
+  themeDescWidth = "35%";
   themeVidLeft= 65;
 
   /*On Mount*/
@@ -857,7 +858,7 @@ class Application extends React.Component {
               position: "absolute",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
@@ -899,7 +900,7 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
@@ -953,7 +954,7 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
@@ -993,7 +994,7 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
@@ -1008,7 +1009,7 @@ class Application extends React.Component {
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
-            width = {6}
+            width = {620}
             height = {360}
             url={this.theme5Video}
             controls={true}
@@ -1033,7 +1034,7 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
@@ -1073,7 +1074,7 @@ class Application extends React.Component {
               display: "inline-block",
               top: "20%",
               zIndex: 5,
-              width: "40%",
+              width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
           >
