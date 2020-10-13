@@ -98,6 +98,22 @@ class Application extends React.Component {
     /*Text Variables*/
     this.aboutText =
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual segments, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals, actors play multiple parts, wholesale roles. It is a patch of land, but a theatre, with rehearsals, scripts and episodic memories keeping gender desirable, as imagined by some, exacted and ordered, with its outlines defined, insides determined, and borders enforced.";
+    this.aboutReferenceText =
+      "I do not own the copyright to this video and some of the phrases from the article above. The use of these is purely for non-profit educational and research purposes.";
+    this.aboutTools = "Google Maps, Mapbox";
+    this.aboutFonts = "Ballinger Mono, Kazimir Text";
+    this.aboutDowry =
+      "Goods, money, or property that a bride brings to her husband and his family during a wedding. In India, even after being outlawed, dowry is often demanded by the husband or his family. A practice that has been cited as a cause for about forty five percent of all homicides against women in India.";
+    this.aboutBangles =
+      "Delicate traditional circular ornaments for wrists, usually worn by women and made with glass.";
+    this.aboutGanga =
+      "One of the longest rivers in India. Considered sacred and worshipped as a goddess by people of the Hindu faith. Also a common name for a woman in India.";
+    this.aboutAshirwad = "A word of Sanskrit origin which means a blessing.";
+    this.aboutAnnapurna =
+      "Sanskrit name of the goddess for food and nourishment in Hindu mythology. Also a common name for a woman in India.";
+    this.aboutBazar =
+      "A local marketplace or a street with stores, both permanent and makeshift.";
+
     this.theme0Desc =
       "The opening act set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. Some actors are to walk with stage directions from google reviews. Others are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through different acts.";
     this.theme1Desc =
@@ -1283,7 +1299,193 @@ class Application extends React.Component {
             &#10005;
           </span>
           {/*About Window - Text Content*/}
-          <p style={{ fontSize: 16, margin: 50 }}> {this.aboutText} </p>
+          <div
+            style={{
+              fontSize: 16,
+              margin: 50
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              {this.aboutText}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              TOOLS{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {this.aboutTools}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              FONTS{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutFonts}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono"
+              }}
+            >
+              {" "}
+              GLOSSARY{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              BAZAR{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutBazar}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              DOWRY{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutDowry}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              BANGLES{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutBangles}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              GANGA{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutGanga}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              ASHIRWAD{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              {this.aboutAshirwad}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom:0
+              }}
+            >
+              {" "}
+              ANNAPURNA{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              {this.aboutAnnapurna}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono"
+              }}
+            >
+              {" "}
+              REFERENCES{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              John Colapinto, ‘Famous Names, does it matter what a product is
+              called’, <i>New Yorker</i>, 26 September 2011 <br />
+              <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
+              <i>YouTube</i>, 26 February 2012 <br />
+              <br /> {this.aboutReferenceText}
+            </p>
+          </div>
         </div>
         {/*Legend Window*/}
         <div
@@ -1534,8 +1736,13 @@ class Application extends React.Component {
                 marginTop: -17
               }}
             >
-              <span style={{display: "inline-block",
-                  verticalAlign: "middle",fontSize: 14}}>
+              <span
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  fontSize: 14
+                }}
+              >
                 &#10045;
               </span>
               <p
