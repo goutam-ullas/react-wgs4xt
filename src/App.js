@@ -113,11 +113,15 @@ class Application extends React.Component {
       "I particularly identify with his naming of the Ganga pressure cooker; my friend’s mother had the same name and we were close friends. My friend, when she got married, also received an entire Ganga cooking range as a wedding gift. I believe, the groom’s family were quite particular about what gifts they wanted. And me, I’ve never taken a meal without bread made from the wheat flour, Annapurna. As best as I can remember, I did not have a friend by this name, though, my grandmother, a devout lady, prayed without end to the goddess, Annapurna.";
     this.theme3Desc4 =
       "Mr. Gupta is a revered Ad Man, and I’d love to have him sit for a talk. This interview, I strongly believe, will put the rest of the plot into perspective.";
-    this.page4Desc = "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
-    this.page5Desc = "And what of the bride, who reaches her marital home with utensils filled to their brim with grains, evidence of having received good care or upbringing (likely one of those)? Do we see these utensils in the frame? Should we see them? Close-ups, stills or do we see them as they are emptied by those in this home? Utensils filled with grain, gradually emptied. Must we see this to understand the story? ";
-    this.page7Desc = "Also consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
-    
-    this.page6Desc = "The question is, why does the muezzin suddenly follow up his recital with a declaration of his love for India? Or was it a plea? A plea far too big, a distance too remote for this neighborhood minaret to broadcast. And I had been looking for a face, a face most depicting of this fear. But for now, I will have to organize and find within this sound those precise points of nostalgia, power and fear."
+    this.page4Desc =
+      "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
+    this.page5Desc =
+      "And what of the bride, who reaches her marital home with utensils filled to their brim with grains, evidence of having received good care or upbringing (likely one of those)? Do we see these utensils in the frame? Should we see them? Close-ups, stills or do we see them as they are emptied by those in this home? Utensils filled with grain, gradually emptied. Must we see this to understand the story? ";
+    this.page7Desc =
+      "Also consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
+
+    this.page6Desc =
+      "The question is, why does the muezzin suddenly follow up his recital with a declaration of his love for India? Or was it a plea? A plea far too big, a distance too remote for this neighborhood minaret to broadcast. And I had been looking for a face, a face most depicting of this fear. But for now, I will have to organize and find within this sound those precise points of nostalgia, power and fear.";
   }
   /* Video URLs*/
   theme0Video = "https://player.vimeo.com/video/467182611";
@@ -128,9 +132,7 @@ class Application extends React.Component {
   theme5Video = "https://vimeo.com/448795035/00689831b4";
   theme6Video = "https://vimeo.com/448630300/810e46cfce";
   theme7Video = "https://vimeo.com/454107513/7c4b053989";
-  
-  
-  
+
   /* Image URLs */
   theme2Img = "https://i.imgur.com/qaEN8qV.png";
 
@@ -149,10 +151,10 @@ class Application extends React.Component {
   circleState = 0;
   maxThemes = 7;
   triangleState = false;
-  themeDescLeft = 0.6*window.innerWidth;
-  themeDescWidth = 0.35*window.innerWidth;
-  themeVidLeft= 65;
-  themeTop = 0.2*window.innerHeight;
+  themeDescLeft = 0.6 * window.innerWidth;
+  themeDescWidth = 0.35 * window.innerWidth;
+  themeVidLeft = 65;
+  themeTop = 0.2 * window.innerHeight;
 
   /*On Mount*/
   componentDidMount() {
@@ -499,7 +501,7 @@ class Application extends React.Component {
     } else {
       this.setState({
         aboutWidth: 0,
-        legendHeight: "15%", 
+        legendHeight: "15%",
         legendState: false
       });
     }
@@ -564,7 +566,7 @@ class Application extends React.Component {
       this.setState({
         researchWidth: 0,
         researchBorder: 0,
-        legendHeight: "15%", 
+        legendHeight: "15%",
         legendState: false
       });
     }
@@ -600,7 +602,12 @@ class Application extends React.Component {
       });
     }
     if (this.circleState == 2) {
-      this.setState({ page3Vis: "visible", page2Vis: "hidden", page1Vis: "hidden", page1Play:false });
+      this.setState({
+        page3Vis: "visible",
+        page2Vis: "hidden",
+        page1Vis: "hidden",
+        page1Play: false
+      });
     }
     if (this.circleState == 3) {
       this.setState({ page4Vis: "visible", page3Vis: "hidden" });
@@ -614,7 +621,7 @@ class Application extends React.Component {
     if (this.circleState == 6) {
       this.setState({ page7Vis: "visible", page6Vis: "hidden" });
     }
-        if (this.circleState == 7) {
+    if (this.circleState == 7) {
       this.setState({ page8Vis: "visible", page7Vis: "hidden" });
     }
   }
@@ -649,19 +656,19 @@ class Application extends React.Component {
       });
     }
     if (this.circleState == 2) {
-      this.setState({ page3Vis: "visible", page4Vis: "hidden"});
+      this.setState({ page3Vis: "visible", page4Vis: "hidden" });
     }
     if (this.circleState == 3) {
-      this.setState({ page4Vis: "visible", page5Vis: "hidden"});
+      this.setState({ page4Vis: "visible", page5Vis: "hidden" });
     }
     if (this.circleState == 4) {
-      this.setState({ page5Vis: "visible", page6Vis: "hidden"});
+      this.setState({ page5Vis: "visible", page6Vis: "hidden" });
     }
     if (this.circleState == 5) {
-      this.setState({ page6Vis: "visible", page7Vis: "hidden"});
+      this.setState({ page6Vis: "visible", page7Vis: "hidden" });
     }
-        if (this.circleState == 6) {
-      this.setState({ page7Vis: "visible", page8Vis: "hidden"});
+    if (this.circleState == 6) {
+      this.setState({ page7Vis: "visible", page8Vis: "hidden" });
     }
     if (this.circleState == 7) {
       this.setState({
@@ -772,13 +779,11 @@ class Application extends React.Component {
     }
   }
 
-
-
   render() {
     return (
       /*Main Div*/
       <div>
-      {/*Background*/}
+        {/*Background*/}
         {/*Page 1*/}
         {/*Page 1 Video*/}
         <ReactPlayer
@@ -848,7 +853,7 @@ class Application extends React.Component {
             position: "fixed",
             pointerEvents: "none",
             left: 0,
-            top:0,
+            top: 0,
             height: "100%",
             width: "100%",
             visibility: this.state.page3Vis
@@ -877,8 +882,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex1
             }}
             url={this.theme1Video}
-            width = {585}
-            height = {360}
+            width={585}
+            height={360}
             controls={true}
           />
         </div>
@@ -928,8 +933,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
             }}
-            width = {585}
-            height = {360}
+            width={585}
+            height={360}
             url={this.theme3Video}
             controls={true}
           />
@@ -941,7 +946,7 @@ class Application extends React.Component {
             position: "fixed",
             pointerEvents: "none",
             left: 0,
-            top:0,
+            top: 0,
             height: "100%",
             width: "100%",
             visibility: this.state.page5Vis
@@ -969,8 +974,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
-            width = {420}
-            height = {360}
+            width={420}
+            height={360}
             controls={true}
           />
         </div>
@@ -980,7 +985,7 @@ class Application extends React.Component {
             position: "fixed",
             pointerEvents: "none",
             left: 0,
-            top:0,
+            top: 0,
             height: "100%",
             width: "100%",
             visibility: this.state.page6Vis
@@ -1007,8 +1012,8 @@ class Application extends React.Component {
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
-            width = {620}
-            height = {360}
+            width={620}
+            height={360}
             url={this.theme5Video}
             controls={true}
           />
@@ -1019,7 +1024,7 @@ class Application extends React.Component {
             position: "fixed",
             pointerEvents: "none",
             left: 0,
-            top:0,
+            top: 0,
             height: "100%",
             width: "100%",
             visibility: this.state.page7Vis
@@ -1047,8 +1052,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme6Video}
-            width = {580}
-            height = {360}
+            width={580}
+            height={360}
             controls={true}
           />
         </div>
@@ -1058,7 +1063,7 @@ class Application extends React.Component {
             position: "fixed",
             pointerEvents: "none",
             left: 0,
-            top:0,
+            top: 0,
             height: "100%",
             width: "100%",
             visibility: this.state.page8Vis
@@ -1086,13 +1091,16 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme7Video}
-            width = {585}
-            height = {360}            
+            width={585}
+            height={360}
             controls={true}
           />
         </div>
         {/*Title Bar*/}
-        <div className="titlebar" style={{ top: -10, width: 600, height: 50, zIndex: 10 }}>
+        <div
+          className="titlebar"
+          style={{ top: -10, width: 600, height: 50, zIndex: 10 }}
+        >
           <Typekit kitId="bor7jxc" />
           {/*Home Button*/}
           <span
@@ -1517,6 +1525,27 @@ class Application extends React.Component {
                 }}
               >
                 Bar & Liquor; # Stores: 2; Commonly Sold: Alcholic beverages
+              </p>
+            </div>
+            {/*Legend Keyboard*/}
+            <div
+              style={{
+                marginLeft: 10,
+                marginTop: -17
+              }}
+            >
+              <span style={{display: "inline-block",
+                  verticalAlign: "middle",fontSize: 14}}>
+                &#10045;
+              </span>
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 11
+                }}
+              >
+                Use arrow keys on keyboard to navigate the map
               </p>
             </div>
           </div>
