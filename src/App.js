@@ -1302,7 +1302,9 @@ class Application extends React.Component {
           <div
             style={{
               fontSize: 16,
-              margin: 50
+              marginLeft: 50,
+              marginRight: 50,
+              marginTop: 25
             }}
           >
             <p
@@ -1441,7 +1443,8 @@ class Application extends React.Component {
             </p>
             <p
               style={{
-                fontFamily: "kazimirtext, sans-serif"
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
               }}
             >
               {" "}
@@ -1458,7 +1461,8 @@ class Application extends React.Component {
             </p>
             <p
               style={{
-                fontFamily: "kazimirtext, sans-serif"
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
               }}
             >
               {" "}
@@ -1483,7 +1487,7 @@ class Application extends React.Component {
               called’, <i>New Yorker</i>, 26 September 2011 <br />
               <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
               <i>YouTube</i>, 26 February 2012 <br />
-              <br /> {this.aboutReferenceText}
+              <br /> {this.aboutReferenceText}<br /><br />
             </p>
           </div>
         </div>
