@@ -825,7 +825,7 @@ class Application extends React.Component {
             zIndex: 10
           }}
         >
-          <FontAwesomeIcon icon={this.state.volumeIcon} color={"#fd3217"} />
+          <FontAwesomeIcon icon={this.state.volumeIcon} color={"b"} />
         </span>
         {/*Map Div*/}
         <div
@@ -859,7 +859,6 @@ class Application extends React.Component {
               display: "inline-block",
               position: "absolute",
               top: "20%",
-
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -901,8 +900,7 @@ class Application extends React.Component {
               position: "absolute",
               top: "20%",
               width: this.themeDescWidth,
-              left: this.themeDescLeft,
-              overflow:"scroll"
+              left: this.themeDescLeft
             }}
           >
             <text className="themeDesc">

@@ -1,6 +1,6 @@
 :root {
   --balloon-border-radius: 0px;
-  --balloon-color: #fd3217;
+  --balloon-color: black;
   --balloon-text-color: #fff;
   --balloon-font-size: 12px;
   --balloon-move: 12px;
@@ -12,18 +12,18 @@
 }
 
 [data-reach-slider-track] {
-  background: #fd3217;
+  background: black;
 }
 
 [data-reach-slider-track-highlight] {
-  background: #fd3217;
+  background: black;
 }
 
 [data-reach-slider-handle] {
   width: 16px;
   height: 16px;
-  border: 2px solid #fd3217;
-  background: #fd3217;
+  border: 2px solid black;
+  background: black;
   border-radius: 16px;
   z-index: 1;
   transform-origin: center;
@@ -32,8 +32,8 @@
 [data-reach-slider-handle]:focus {
   width: 16px;
   height: 16px;
-  border: 2px solid #fd3217;
-  background: #fd3217;
+  border: 2px solid black;
+  background: black;
   border-radius: 16px;
   z-index: 1;
   transform-origin: center;
@@ -293,7 +293,7 @@ button[aria-label][data-balloon-pos] {
   font-style: normal;
   font-weight: 100;
   position: fixed;
-  color: #fd3217;
+  color: black;
 }
 
 .mapScaleMain{
@@ -301,7 +301,7 @@ button[aria-label][data-balloon-pos] {
     position: fixed;
     height: 1.22px;
     width: 120px;
-    background-color: #fd3217;
+    background-color: black;
     top:30px;
     right:25px;
 }
@@ -311,14 +311,14 @@ button[aria-label][data-balloon-pos] {
     position: fixed;
     height: 10px;
     width: 1.22px;
-    background-color: #fd3217;
+    background-color: black;
     top:25px;
 }
 
 .mapScaleNumber{
     display: block;
     position: fixed;
-    color: #fd3217;
+    color: black;
     top:30px;
     font-family: ballinger-mono;
     font-size: 12;
@@ -388,10 +388,6 @@ display:inline;
   font-family: kazimirtext, sans-serif;
   font-size: 16px;
   overflow: scroll;
-}
-
-.desc {
-overflow: scroll;
 }
 
 .legendDot {
