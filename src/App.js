@@ -149,9 +149,10 @@ class Application extends React.Component {
   circleState = 0;
   maxThemes = 7;
   triangleState = false;
-  themeDescLeft = "60%";
-  themeDescWidth = "35%";
+  themeDescLeft = 0.6*window.innerWidth;
+  themeDescWidth = 0.35*window.innerWidth;
   themeVidLeft= 65;
+  themeTop = 0.2*window.innerHeight;
 
   /*On Mount*/
   componentDidMount() {
@@ -801,7 +802,7 @@ class Application extends React.Component {
         <div
           style={{
             position: "fixed",
-            top: "20%",
+            top: this.themeTop,
             width: this.themeDescWidth,
             left: this.themeDescLeft,
             visibility: this.state.page2Vis,
@@ -825,7 +826,7 @@ class Application extends React.Component {
             zIndex: 10
           }}
         >
-          <FontAwesomeIcon icon={this.state.volumeIcon} color={"b"} />
+          <FontAwesomeIcon icon={this.state.volumeIcon} color={"black"} />
         </span>
         {/*Map Div*/}
         <div
@@ -858,7 +859,7 @@ class Application extends React.Component {
             style={{
               display: "inline-block",
               position: "absolute",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -871,7 +872,7 @@ class Application extends React.Component {
             ref={el => (this.video1Ref = el)}
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex1
             }}
@@ -898,7 +899,7 @@ class Application extends React.Component {
           <div
             style={{
               position: "absolute",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -922,7 +923,7 @@ class Application extends React.Component {
             ref={el => (this.video1Ref = el)}
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex1,
               transition: "top 1s"
@@ -951,7 +952,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -963,7 +964,7 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -990,7 +991,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -1002,7 +1003,7 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -1029,7 +1030,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -1041,7 +1042,7 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
@@ -1068,7 +1069,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               width: this.themeDescWidth,
               left: this.themeDescLeft
             }}
@@ -1080,7 +1081,7 @@ class Application extends React.Component {
             className="video"
             style={{
               display: "inline-block",
-              top: "20%",
+              top: this.themeTop,
               left: this.themeVidLeft,
               zIndex: this.state.videoZindex4
             }}
