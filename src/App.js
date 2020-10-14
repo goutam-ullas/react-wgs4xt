@@ -921,7 +921,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: this.themeTop,
-              height: 3window.innerHeight/2,
+              height: 0.75*window.innerHeight/,
               width: this.themeDescWidth,
               left: this.themeDescLeft,
               pointerEvents: "all",
