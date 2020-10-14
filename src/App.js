@@ -233,7 +233,7 @@ class Application extends React.Component {
       );
     });
     /*Map - Dots PopUp*/
-    this.map.on("m", e => {
+    this.map.on("mousemove", e => {
       var pageX = window.event.pageX - window.scrollX;
       var pageY = window.event.pageY - window.scrollY;
       var features = this.map.queryRenderedFeatures(e.point, {
@@ -415,7 +415,7 @@ class Application extends React.Component {
       });
     });
     /*Map - Change Cursor Style when hover over dots*/
-    this.map.on("mousemove", e => {
+ /*   this.map.on("mousemove", e => {
       // Set variables equal to the current feature's magnitude, location, and time
       var hoverFeatures = this.map.queryRenderedFeatures(e.point, {
         layers: [
@@ -436,7 +436,7 @@ class Application extends React.Component {
       } else {
         this.map.getCanvas().style.cursor = "all-scroll";
       }
-    });
+    });*/
     /*Remove PopUp when clicked on About, Research, or Legend windows*/
     window.addEventListener("mousedown", this.handleAboutResearchClick);
     this.researchURL();
