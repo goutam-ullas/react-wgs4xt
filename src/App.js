@@ -908,12 +908,12 @@ class Application extends React.Component {
         <div
           style={{
             position: "fixed",
-            pointerEvents: "none",
             top: 0,
             left: 0,
             height: "100%",
             width: "100%",
-            visibility: this.state.page4Vis
+            visibility: this.state.page4Vis,
+            pointerEvents: "none"
           }}
         >
           {/*Theme 3 Description*/}
@@ -921,8 +921,11 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: this.themeTop,
+              height: 3window.innerHeight/2,
               width: this.themeDescWidth,
-              left: this.themeDescLeft
+              left: this.themeDescLeft,
+              pointerEvents: "all",
+              overflow: "scroll"
             }}
           >
             <text className="themeDesc">
