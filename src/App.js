@@ -144,7 +144,7 @@ class Application extends React.Component {
   theme1Video = "https://vimeo.com/448630508/11ec6d4d54";
   theme2Video = "https://vimeo.com/448632066/2ab228f98c";
   theme3Video = "https://vimeo.com/448631543/98f339b864";
-  theme4Video = "https://vimeo.com/448631454/d006e93a41";
+  theme4Video = "https://player.vimeo.com/video/468048345";
   theme5Video = "https://vimeo.com/448795035/00689831b4";
   theme6Video = "https://vimeo.com/448630300/810e46cfce";
   theme7Video = "https://vimeo.com/454107513/7c4b053989";
@@ -990,7 +990,7 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
-            width={420}
+            width={680}
             height={360}
             controls={true}
           />

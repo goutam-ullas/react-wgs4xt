@@ -30,7 +30,7 @@ export default function SinglePage(props) {
   return (
     <>
       <div style={{ display: "table-cell", verticalAlign: "middle" }}>
-        <div style={{textAlign: "center", verticalAlign: "middle"}}>
+        <div style={{ textAlign: "center", verticalAlign: "middle"}}>
           <div style={{ display: "inline-block" }}>
             <button
               className="button"
@@ -40,7 +40,7 @@ export default function SinglePage(props) {
               <span>&#60;</span>
             </button>
           </div>
-          <div style={{ display: "inline-block" }}>
+          <div style={{ display: "inline-block"}}>
             <p
               style={{
                 fontSize: 12,
