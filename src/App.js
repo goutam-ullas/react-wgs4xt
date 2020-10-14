@@ -233,7 +233,7 @@ class Application extends React.Component {
       );
     });
     /*Map - Dots PopUp*/
-    this.map.on("click", e => {
+    this.map.on("m", e => {
       var pageX = window.event.pageX - window.scrollX;
       var pageY = window.event.pageY - window.scrollY;
       var features = this.map.queryRenderedFeatures(e.point, {
