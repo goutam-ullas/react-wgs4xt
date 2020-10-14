@@ -149,8 +149,6 @@ class Application extends React.Component {
   theme6Video = "https://vimeo.com/448630300/810e46cfce";
   theme7Video = "https://vimeo.com/454107513/7c4b053989";
 
-  /* Image URLs */
-  theme2Img = "https://i.imgur.com/qaEN8qV.png";
 
   /* Legend colors */
   godsColor = "#79859a";
@@ -921,7 +919,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: this.themeTop,
-              height: 0.7*window.innerHeight,
+              height: 0.6*window.innerHeight,
               width: this.themeDescWidth,
               left: this.themeDescLeft,
               pointerEvents: "all",
