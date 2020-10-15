@@ -33,7 +33,9 @@ class Application extends React.Component {
       value: 50,
       index: true,
       aboutState: true,
+      glossaryState: true,
       aboutWidth: 0,
+      glossaryWidth: 0,
       researchState: true,
       researchWidth: 0,
       researchBorder: 0,
@@ -74,6 +76,7 @@ class Application extends React.Component {
     this.researchRef = React.createRef();
     this.aboutRef = React.createRef();
     this.legendRef = React.createRef();
+    this.glossaryRef = React.createRef();
     this.video1Ref = React.createRef();
     this.video2Ref = React.createRef();
     this.video3Ref = React.createRef();
@@ -88,7 +91,7 @@ class Application extends React.Component {
     this.circleFunctionDown = this.circleFunctionDown.bind(this);
     this.triangleFunction = this.triangleFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
-    this.legendFunction = this.legendFunction.bind(this);
+    this.glossaryFunction = this.glossaryFunction.bind(this);
     this.researchFunction = this.researchFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -148,7 +151,6 @@ class Application extends React.Component {
   theme5Video = "https://vimeo.com/448795035/00689831b4";
   theme6Video = "https://vimeo.com/448630300/810e46cfce";
   theme7Video = "https://vimeo.com/454107513/7c4b053989";
-
 
   /* Legend colors */
   godsColor = "#79859a";
@@ -413,7 +415,7 @@ class Application extends React.Component {
       });
     });
     /*Map - Change Cursor Style when hover over dots*/
- /*   this.map.on("mousemove", e => {
+    /*   this.map.on("mousemove", e => {
       // Set variables equal to the current feature's magnitude, location, and time
       var hoverFeatures = this.map.queryRenderedFeatures(e.point, {
         layers: [
@@ -452,6 +454,7 @@ class Application extends React.Component {
   indexFunction() {
     this.setState({
       aboutState: true,
+      glossaryState: true,
       researchState: true,
       legendState: true
     });
@@ -505,6 +508,9 @@ class Application extends React.Component {
     if (this.state.researchState == false) {
       this.setState({ researchWidth: 0, researchState: true });
     }
+    if (this.state.glossaryState == false) {
+      this.setState({ glossaryWidth: 0, glossaryState: true });
+    }
     if (this.state.legendState == false) {
       this.setState({ legendHeight: 0, legendState: true });
     }
@@ -512,7 +518,9 @@ class Application extends React.Component {
       this.setState({
         aboutWidth: "40.5%"
       });
-    } else {
+    }
+       
+    else {
       this.setState({
         aboutWidth: 0,
         legendHeight: "15%",
@@ -521,10 +529,9 @@ class Application extends React.Component {
     }
   }
   /*When clicked on Legend button*/
-  legendFunction() {
-    console.log("legend");
+  glossaryFunction() {
     this.setState(prevState => ({
-      legendState: !prevState.legendState
+      glossaryState: !prevState.glossaryState
     }));
     this.setState({
       popUpH: 0,
@@ -533,24 +540,26 @@ class Application extends React.Component {
       layerName: "",
       popUpPad: 0
     });
-    if (this.state.aboutState == false) {
-      this.setState({
-        aboutWidth: 0,
-        aboutState: true
-      });
-    }
     if (this.state.researchState == false) {
-      this.setState({
-        researchWidth: 0,
-        researchState: true
-      });
+      this.setState({ researchWidth: 0, researchState: true });
     }
-    if (this.state.legendState == true) {
-      this.setState({ legendHeight: "15%" });
-      var legendId = document.getElementById("legendWindow");
-      legendId.scrollTop = 0;
-    } else {
-      this.setState({ legendHeight: 0 });
+    if (this.state.legendState == false) {
+      this.setState({ legendHeight: 0, legendState: true });
+    }
+    if (this.state.aboutState == false) {
+      this.setState({ aboutWidth: 0, aboutState: true });
+    }    
+    if (this.state.glossaryState == true) {
+      this.setState({
+        glossaryWidth: "40.5%"
+      });
+    }   
+    else {
+      this.setState({
+        glossaryWidth: 0,
+        legendHeight: "15%",
+        legendState: false
+      });
     }
   }
   /*When clicked on Research button*/
@@ -568,6 +577,9 @@ class Application extends React.Component {
     if (this.state.aboutState == false) {
       this.setState({ aboutWidth: 0, aboutState: true });
     }
+    if (this.state.glossaryState == false) {
+      this.setState({ glossaryWidth: 0, glossaryState: true });
+    }    
     if (this.state.legendState == false) {
       this.setState({ legendHeight: 0, legendState: true });
     }
@@ -919,7 +931,7 @@ class Application extends React.Component {
             style={{
               position: "absolute",
               top: this.themeTop,
-              height: 0.6*window.innerHeight,
+              height: 0.6 * window.innerHeight,
               width: this.themeDescWidth,
               left: this.themeDescLeft,
               pointerEvents: "all",
@@ -1232,9 +1244,9 @@ class Application extends React.Component {
           {/*Legend Button*/}
           <span
             role="button"
-            aria-label="Legend"
+            aria-label="Glossary"
             data-balloon-pos="down-right"
-            onClick={this.legendFunction}
+            onClick={this.glossaryFunction}
             style={{
               fontSize: 32,
               position: "relative",
@@ -1364,7 +1376,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1382,7 +1394,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1400,7 +1412,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1418,7 +1430,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1436,7 +1448,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1454,7 +1466,7 @@ class Application extends React.Component {
             <p
               style={{
                 fontFamily: "ballinger-mono",
-                marginBottom:0
+                marginBottom: 0
               }}
             >
               {" "}
@@ -1488,7 +1500,230 @@ class Application extends React.Component {
               called’, <i>New Yorker</i>, 26 September 2011 <br />
               <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
               <i>YouTube</i>, 26 February 2012 <br />
-              <br /> {this.aboutReferenceText}<br /><br />
+              <br /> {this.aboutReferenceText}
+              <br />
+              <br />
+            </p>
+          </div>
+        </div>
+        {/*Glossary Window*/}
+        <div
+          className="about"
+          ref={this.glossaryRef}
+          style={{
+            width: this.state.glossaryWidth,
+            height: window.innerHeight,
+            zIndex: 100
+          }}
+        >
+          {/*glossary Window - Close Button*/}
+          <span
+            role="button"
+            aria-label=""
+            onClick={this.glossaryFunction}
+            style={{
+              fontSize: 16,
+              position: "absolute",
+              marginLeft: 10,
+              marginTop: 10,
+              color: "white",
+              zIndex: 101
+            }}
+          >
+            &#10005;
+          </span>
+          {/*Glossary Window - Text Content*/}
+          <div
+            style={{
+              fontSize: 16,
+              marginLeft: 50,
+              marginRight: 50,
+              marginTop: 25
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              {this.aboutText}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              TOOLS{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {this.aboutTools}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              FONTS{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutFonts}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono"
+              }}
+            >
+              {" "}
+              GLOSSARY{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              BAZAR{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutBazar}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              DOWRY{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutDowry}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              BANGLES{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutBangles}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              GANGA{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutGanga}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              ASHIRWAD{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutAshirwad}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              ANNAPURNA{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutAnnapurna}{" "}
+            </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono"
+              }}
+            >
+              {" "}
+              REFERENCES{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif"
+              }}
+            >
+              {" "}
+              John Colapinto, ‘Famous Names, does it matter what a product is
+              called’, <i>New Yorker</i>, 26 September 2011 <br />
+              <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
+              <i>YouTube</i>, 26 February 2012 <br />
+              <br /> {this.aboutReferenceText}
+              <br />
+              <br />
             </p>
           </div>
         </div>
@@ -1504,22 +1739,6 @@ class Application extends React.Component {
             zIndex: 100
           }}
         >
-          {/*Legend Window - Close Button*/}
-          <span
-            role="button"
-            aria-label=""
-            onClick={this.legendFunction}
-            style={{
-              fontSize: 16,
-              position: "fixed",
-              marginLeft: 10,
-              marginTop: 10,
-              color: "white",
-              zIndex: 101
-            }}
-          >
-            &#10005;
-          </span>
           {/*Legend Window - Content Div Left*/}
           <div
             style={{
