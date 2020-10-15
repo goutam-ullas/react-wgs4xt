@@ -1142,7 +1142,7 @@ class Application extends React.Component {
           <span
             role="button"
             aria-label="Home"
-            data-balloon-pos="down-l"
+            data-balloon-pos="down-left"
             onClick={this.indexFunction}
             style={{
               fontSize: 48,
