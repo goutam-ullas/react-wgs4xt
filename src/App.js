@@ -158,7 +158,7 @@ class Application extends React.Component {
   theme2Video = "https://vimeo.com/448632066/2ab228f98c";
   theme3Video = "https://vimeo.com/448631543/98f339b864";
   theme4Video = "https://player.vimeo.com/video/468048345";
-  theme5Video = "https://vimeo.com/448795035/00689831b4";
+  theme5Video = "https://vimeo.com/468749930/9aa12e293d";
   theme6Video = "https://player.vimeo.com/video/468522985";
   theme7Video = "https://player.vimeo.com/video/468487439";
 
