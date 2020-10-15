@@ -119,7 +119,7 @@ class Application extends React.Component {
       this.aboutAzan =
       "A Muslim call to prayer that is said five times a day, usually from a minaret or a mosque.";
       this.aboutTelangana =
-      "State in southern Indi";
+      "State in southern India.";
       this.aboutIndia =
       "The political climate in India since 2019 is dominated by the return to Government of Narendra Modi’s Hindu Nationalist party, the Bharatiya Janata Party (BJP). His Government has since introduced many controversial laws, including a Citizenship Amendment Act, which have increased the sense of fear among the Indian Muslims. Since 2014, when Modi first came to power, India has seen an increase in religious violence against Muslims.";
     this.aboutBazar =
@@ -1150,7 +1150,7 @@ class Application extends React.Component {
               top: 5.5,
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             &#9675;
@@ -1168,7 +1168,7 @@ class Application extends React.Component {
               top: 0,
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             About
@@ -1185,7 +1185,7 @@ class Application extends React.Component {
               top: -2,
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center",
+              textAlign: "bottom",
               verticalAlign: "middle",
               width: 120
             }}
@@ -1208,12 +1208,12 @@ class Application extends React.Component {
               display: "inline",
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             &#x25E7;
           </span>
-          {/*previous Button*/}
+          {/*Next Button*/}
           <span
             role="button"
             aria-label="Next"
@@ -1225,7 +1225,7 @@ class Application extends React.Component {
               display: "inline",
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             &#x25E8;
@@ -1243,27 +1243,27 @@ class Application extends React.Component {
               top: 3,
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             &#9653;
           </span>
-          {/*Legend Button*/}
+          {/*Glossary Button*/}
           <span
             role="button"
             aria-label="Glossary"
             data-balloon-pos="down-right"
             onClick={this.glossaryFunction}
             style={{
-              fontSize: 32,
+              fontSize: 2,
               position: "relative",
               display: "inline",
               marginLeft: 10,
               marginRight: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
-            &#9677;
+            &#9636;
           </span>
           {/*Research Button*/}
           <span
@@ -1277,7 +1277,7 @@ class Application extends React.Component {
               display: "inline",
               top: 0,
               marginLeft: 10,
-              textAlign: "center"
+              textAlign: "bottom"
             }}
           >
             Research
