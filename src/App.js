@@ -16,6 +16,7 @@ import "./style.css";
 import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
 import { sampleBase64pdf } from "./nThesisBase64pdf";
+import logo from './Keyboard_Arrows.svg';
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm5pa2l0YSIsImEiOiJjazdtYzV2MDYwMzliM2dubnVubnJuMTRrIn0.6KqRhtWgMc_nGwMPAqmstQ";
@@ -1844,7 +1845,7 @@ class Application extends React.Component {
             {/*Legend Keyboard*/}
             <div
               style={{
-                marginLeft: 10,
+                marginLeft: 7.5,
                 marginTop: -17
               }}
             >
@@ -1852,16 +1853,17 @@ class Application extends React.Component {
                 style={{
                   display: "inline-block",
                   verticalAlign: "middle",
-                  fontSize: 14
+                  height:14,
+                  width:14
                 }}
-                src="/Keyboard_Arrows.svg"
+                src={logo}
               />
 
               <p
                 style={{
                   display: "inline-block",
                   verticalAlign: "middle",
-                  marginLeft: 11
+                  marginLeft: 1
                 }}
               >
                 Use arrow keys on keyboard to navigate the map
