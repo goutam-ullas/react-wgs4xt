@@ -1224,7 +1224,7 @@ class Application extends React.Component {
               fontSize: 32,
               position: "relative",
               display: "inline",
-              marginLeft: 8,
+              marginLeft: 10,
               marginRight: 8,
               textAlign: "bottom"
             }}
@@ -1242,7 +1242,7 @@ class Application extends React.Component {
               position: "relative",
               display: "inline-block",
               top: 3,
-              marginLeft: 8,
+              marginLeft: ,
               marginRight: 8,
               textAlign: "bottom"
             }}
