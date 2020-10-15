@@ -1141,15 +1141,16 @@ class Application extends React.Component {
           {/*Home Button*/}
           <span
             role="button"
-            aria-label=""
+            aria-label="Home"
+            data-balloon-pos="down-l"
             onClick={this.indexFunction}
             style={{
               fontSize: 48,
               position: "relative",
               display: "inline",
               top: 5.5,
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1166,8 +1167,8 @@ class Application extends React.Component {
               position: "relative",
               display: "inline",
               top: 0,
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1183,8 +1184,8 @@ class Application extends React.Component {
               position: "relative",
               display: "inline-block",
               top: -2,
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom",
               verticalAlign: "middle",
               width: 120
@@ -1206,8 +1207,8 @@ class Application extends React.Component {
               fontSize: 32,
               position: "relative",
               display: "inline",
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1223,8 +1224,8 @@ class Application extends React.Component {
               fontSize: 32,
               position: "relative",
               display: "inline",
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1241,8 +1242,8 @@ class Application extends React.Component {
               position: "relative",
               display: "inline-block",
               top: 3,
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1258,8 +1259,8 @@ class Application extends React.Component {
               fontSize: 26,
               position: "relative",
               display: "inline",
-              marginLeft: 10,
-              marginRight: 10,
+              marginLeft: 8,
+              marginRight: 8,
               textAlign: "bottom"
             }}
           >
@@ -1276,7 +1277,7 @@ class Application extends React.Component {
               position: "relative",
               display: "inline",
               top: 0,
-              marginLeft: 10,
+              marginLeft: 8,
               textAlign: "bottom"
             }}
           >
