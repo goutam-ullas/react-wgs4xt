@@ -1255,7 +1255,7 @@ class Application extends React.Component {
             data-balloon-pos="down-right"
             onClick={this.glossaryFunction}
             style={{
-              fontSize: 2,
+              fontSize: 26,
               position: "relative",
               display: "inline",
               marginLeft: 10,
