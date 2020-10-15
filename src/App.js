@@ -103,7 +103,7 @@ class Application extends React.Component {
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual segments, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals, actors play multiple parts, wholesale roles. It is a patch of land, but a theatre, with rehearsals, scripts and episodic memories keeping gender desirable, as imagined by some, exacted and ordered, with its outlines defined, insides determined, and borders enforced.";
     this.aboutReferenceText =
       "I do not own the copyright to this video and some of the phrases from the article above. The use of these is purely for non-profit educational and research purposes.";
-    this.aboutTools = "Google Maps, Mapbox";
+    this.aboutTools = "Mapbox, Google Maps";
     this.aboutFonts = "Ballinger Mono, Kazimir Text";
     this.aboutDowry =
       "Goods, money, or property that a bride brings to her husband and his family during a wedding. In India, even after being outlawed, dowry is often demanded by the husband or his family. A practice that has been cited as a cause for about forty five percent of all homicides against women in India.";
@@ -114,6 +114,14 @@ class Application extends React.Component {
     this.aboutAshirwad = "A word of Sanskrit origin which means a blessing.";
     this.aboutAnnapurna =
       "Sanskrit name of the goddess for food and nourishment in Hindu mythology. Also a common name for a woman in India.";
+      this.aboutImam =
+      "A Muezzin, who calls muslims to prayer from the minaret of a mosque. He leads the call (adhan or Azan) to Friday service and the five daily prayers from one of the mosque's minarets and Imam is the title given to the person who leads prayers at a mosque.";
+      this.aboutAzan =
+      "A Muslim call to prayer that is said five times a day, usually from a minaret or a mosque.";
+      this.aboutTelangana =
+      "State in southern Indi";
+      this.aboutIndia =
+      "The political climate in India since 2019 is dominated by the return to Government of Narendra Modi’s Hindu Nationalist party, the Bharatiya Janata Party (BJP). His Government has since introduced many controversial laws, including a Citizenship Amendment Act, which have increased the sense of fear among the Indian Muslims. Since 2014, when Modi first came to power, India has seen an increase in religious violence against Muslims.";
     this.aboutBazar =
       "A local marketplace or a street with stores, both permanent and makeshift.";
 
@@ -518,8 +526,7 @@ class Application extends React.Component {
       this.setState({
         aboutWidth: "40.5%"
       });
-    }
-       
+    }   
     else {
       this.setState({
         aboutWidth: 0,
@@ -1349,141 +1356,6 @@ class Application extends React.Component {
             <hr />
             <p
               style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              FONTS{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutFonts}{" "}
-            </p>
-            <hr />
-            <p
-              style={{
-                fontFamily: "ballinger-mono"
-              }}
-            >
-              {" "}
-              GLOSSARY{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              BAZAR{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutBazar}{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              DOWRY{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutDowry}{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              BANGLES{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutBangles}{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              GANGA{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutGanga}{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              ASHIRWAD{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutAshirwad}{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              ANNAPURNA{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutAnnapurna}{" "}
-            </p>
-            <hr />
-            <p
-              style={{
                 fontFamily: "ballinger-mono"
               }}
             >
@@ -1543,59 +1415,6 @@ class Application extends React.Component {
           >
             <p
               style={{
-                fontFamily: "kazimirtext, sans-serif"
-              }}
-            >
-              {" "}
-              {this.aboutText}{" "}
-            </p>
-            <hr />
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              {" "}
-              TOOLS{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {this.aboutTools}
-            </p>
-            <hr />
-            <p
-              style={{
-                fontFamily: "ballinger-mono",
-                marginBottom: 0
-              }}
-            >
-              FONTS{" "}
-            </p>
-            <p
-              style={{
-                fontFamily: "kazimirtext, sans-serif",
-                marginTop: 0
-              }}
-            >
-              {" "}
-              {this.aboutFonts}{" "}
-            </p>
-            <hr />
-            <p
-              style={{
-                fontFamily: "ballinger-mono"
-              }}
-            >
-              {" "}
-              GLOSSARY{" "}
-            </p>
-            <p
-              style={{
                 fontFamily: "ballinger-mono",
                 marginBottom: 0
               }}
@@ -1702,29 +1521,80 @@ class Application extends React.Component {
               {" "}
               {this.aboutAnnapurna}{" "}
             </p>
-            <hr />
             <p
               style={{
-                fontFamily: "ballinger-mono"
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
               }}
             >
               {" "}
-              REFERENCES{" "}
+              IMAM{" "}
             </p>
             <p
               style={{
-                fontFamily: "kazimirtext, sans-serif"
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
               }}
             >
               {" "}
-              John Colapinto, ‘Famous Names, does it matter what a product is
-              called’, <i>New Yorker</i>, 26 September 2011 <br />
-              <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
-              <i>YouTube</i>, 26 February 2012 <br />
-              <br /> {this.aboutReferenceText}
-              <br />
-              <br />
+              {this.aboutImam}{" "}
             </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              AZAN{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutAzan}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              TELANGANA{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutTelangana}{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              INDIA'S CURRENT POLITICAL CLIMATE{" "}
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutIndia}{" "}
+            </p>
+              <br />
+              <br />
           </div>
         </div>
         {/*Legend Window*/}
