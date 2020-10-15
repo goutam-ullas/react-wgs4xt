@@ -114,17 +114,17 @@ class Application extends React.Component {
     this.aboutAshirwad = "A word of Sanskrit origin which means a blessing.";
     this.aboutAnnapurna =
       "Sanskrit name of the goddess for food and nourishment in Hindu mythology. Also a common name for a woman in India.";
-      this.aboutImam =
+    this.aboutImam =
       "A Muezzin, who calls muslims to prayer from the minaret of a mosque. He leads the call (adhan or Azan) to Friday service and the five daily prayers from one of the mosque's minarets and Imam is the title given to the person who leads prayers at a mosque.";
-      this.aboutAzan =
+    this.aboutAzan =
       "A Muslim call to prayer that is said five times a day, usually from a minaret or a mosque.";
-      this.aboutTelangana =
-      "State in southern India.";
-      this.aboutIndia =
+    this.aboutTelangana = "State in southern India.";
+    this.aboutIndia =
       "The political climate in India since 2019 is dominated by the return to Government of Narendra Modi’s Hindu Nationalist party, the Bharatiya Janata Party (BJP). His Government has since introduced many controversial laws, including a Citizenship Amendment Act, which have increased the sense of fear among the Indian Muslims. Since 2014, when Modi first came to power, India has seen an increase in religious violence against Muslims.";
     this.aboutBazar =
       "A local marketplace or a street with stores, both permanent and makeshift.";
-      this.aboutGrahasti = "A term used to define a home, a household, its people, things and everything connected with looking after it. Invariably, the term is almost always used with reference to the woman being central to this act of looking after."
+    this.aboutGrahasti =
+      "A term used to define a home, a household, its people, things and everything connected with looking after it. Invariably, the term is almost always used with reference to the woman being central to this act of looking after.";
 
     this.theme0Desc =
       "The opening act set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. Some actors are to walk with stage directions from google reviews. Others are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through different acts.";
@@ -527,8 +527,7 @@ class Application extends React.Component {
       this.setState({
         aboutWidth: "40.5%"
       });
-    }   
-    else {
+    } else {
       this.setState({
         aboutWidth: 0,
         legendHeight: "15%",
@@ -556,13 +555,12 @@ class Application extends React.Component {
     }
     if (this.state.aboutState == false) {
       this.setState({ aboutWidth: 0, aboutState: true });
-    }    
+    }
     if (this.state.glossaryState == true) {
       this.setState({
         glossaryWidth: "40.5%"
       });
-    }   
-    else {
+    } else {
       this.setState({
         glossaryWidth: 0,
         legendHeight: "15%",
@@ -587,7 +585,7 @@ class Application extends React.Component {
     }
     if (this.state.glossaryState == false) {
       this.setState({ glossaryWidth: 0, glossaryState: true });
-    }    
+    }
     if (this.state.legendState == false) {
       this.setState({ legendHeight: 0, legendState: true });
     }
@@ -1613,8 +1611,8 @@ class Application extends React.Component {
               {" "}
               {this.aboutIndia}{" "}
             </p>
-              <br />
-              <br />
+            <br />
+            <br />
           </div>
         </div>
         {/*Legend Window*/}
@@ -1850,15 +1848,15 @@ class Application extends React.Component {
                 marginTop: -17
               }}
             >
-              <span
+              <img
                 style={{
                   display: "inline-block",
                   verticalAlign: "middle",
                   fontSize: 14
                 }}
-              >
-                &#10045;
-              </span>
+                src="/Keyboard_Arrows.svg"
+              />
+
               <p
                 style={{
                   display: "inline-block",
