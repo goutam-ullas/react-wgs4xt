@@ -1538,7 +1538,7 @@ class Application extends React.Component {
               }}
             >
               {" "}
-              {this.aboutG}{" "}
+              {this.aboutGrahasti}{" "}
             </p>
             <p
               style={{
