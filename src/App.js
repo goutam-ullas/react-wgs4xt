@@ -159,7 +159,7 @@ class Application extends React.Component {
   theme3Video = "https://vimeo.com/448631543/98f339b864";
   theme4Video = "https://player.vimeo.com/video/468048345";
   theme5Video = "https://vimeo.com/448795035/00689831b4";
-  theme6Video = "https://vimeo.com/448630300/810e46cfce";
+  theme6Video = "https://player.vimeo.com/video/468522985";
   theme7Video = "https://player.vimeo.com/video/468487439";
 
   /* Legend colors */
@@ -1863,7 +1863,7 @@ class Application extends React.Component {
                 style={{
                   display: "inline-block",
                   verticalAlign: "middle",
-                  marginLeft: 1
+                  marginLeft: 9
                 }}
               >
                 Use arrow keys on keyboard to navigate the map
