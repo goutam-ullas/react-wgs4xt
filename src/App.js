@@ -158,7 +158,7 @@ class Application extends React.Component {
   theme4Video = "https://player.vimeo.com/video/468048345";
   theme5Video = "https://vimeo.com/448795035/00689831b4";
   theme6Video = "https://vimeo.com/448630300/810e46cfce";
-  theme7Video = "https://vimeo.com/454107513/7c4b053989";
+  theme7Video = "https://player.vimeo.com/video/468487439";
 
   /* Legend colors */
   godsColor = "#79859a";
@@ -1242,7 +1242,7 @@ class Application extends React.Component {
               position: "relative",
               display: "inline-block",
               top: 3,
-              marginLeft: ,
+              marginLeft: 10,
               marginRight: 8,
               textAlign: "bottom"
             }}
