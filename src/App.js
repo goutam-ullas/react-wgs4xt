@@ -129,7 +129,7 @@ class Application extends React.Component {
       "A term used to define a home, a household, its people, things and everything connected with looking after it. Invariably, the term is almost always used with reference to the woman being central to this act of looking after.";
 
     this.page1Desc =
-      "The opening act to be set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. The actors are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through different acts.";
+      "The opening act to be set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. The actors are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through    different acts.";
 
     this.page2Desc1 = "Dear Common Good,";
     this.page2Desc2 =
@@ -861,7 +861,7 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             top: this.themeTop,
-            width: this.themeDescWidth,
+            width: 0.95*this.themeDescWidth,
             left: this.themeDescLeft,
             visibility: this.state.page2Vis,
             zIndex: 1
