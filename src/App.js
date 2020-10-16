@@ -1698,10 +1698,37 @@ class Application extends React.Component {
               display: "inline-block"
             }}
           >
+            {/*Legend Keyboard*/}
+            <div
+              style={{
+                marginLeft: 7.5
+              }}
+            >
+              <img
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  height: 14,
+                  width: 14
+                }}
+                src={logo}
+              />
+
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 9
+                }}
+              >
+                Use arrow keys on keyboard to navigate the map
+              </p>
+            </div>          
             {/*Legend Gods*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -17
               }}
             >
               <span
@@ -1784,11 +1811,22 @@ class Application extends React.Component {
                 Ladles, Crockery
               </p>
             </div>
+          </div>
+          {/*Legend Window - Content Div Right*/}
+          <div
+            style={{
+              marginTop: 5,
+              marginLeft: 100,
+              fontFamily: "ballinger-mono",
+              fontWeight: "Light",
+              fontSize: 10,
+              display: "inline-block"
+            }}
+          >
             {/*Legend Grocery*/}
             <div
               style={{
-                marginLeft: 10,
-                marginTop: -17
+                marginLeft: 10
               }}
             >
               <span
@@ -1804,23 +1842,12 @@ class Application extends React.Component {
               >
                 Grocery; # Stores: 33; Commonly Sold: Grains, Spices
               </p>
-            </div>
-          </div>
-          {/*Legend Window - Content Div Right*/}
-          <div
-            style={{
-              marginTop: 5,
-              marginLeft: 100,
-              fontFamily: "ballinger-mono",
-              fontWeight: "Light",
-              fontSize: 10,
-              display: "inline-block"
-            }}
-          >
+            </div>          
             {/*Legend Toys*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -17
               }}
             >
               <span
@@ -1899,33 +1926,6 @@ class Application extends React.Component {
                 }}
               >
                 Bar & Liquor; # Stores: 2; Commonly Sold: Alcholic beverages
-              </p>
-            </div>
-            {/*Legend Keyboard*/}
-            <div
-              style={{
-                marginLeft: 7.5,
-                marginTop: -17
-              }}
-            >
-              <img
-                style={{
-                  display: "inline-block",
-                  verticalAlign: "middle",
-                  height: 14,
-                  width: 14
-                }}
-                src={logo}
-              />
-
-              <p
-                style={{
-                  display: "inline-block",
-                  verticalAlign: "middle",
-                  marginLeft: 9
-                }}
-              >
-                Use arrow keys on keyboard to navigate the map
               </p>
             </div>
           </div>
