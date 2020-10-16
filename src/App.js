@@ -16,7 +16,7 @@ import "./style.css";
 import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
 import { sampleBase64pdf } from "./nThesisBase64pdf";
-import logo from './Keyboard_Arrows.svg';
+import logo from "./Keyboard_Arrows.svg";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoibm5pa2l0YSIsImEiOiJjazdtYzV2MDYwMzliM2dubnVubnJuMTRrIn0.6KqRhtWgMc_nGwMPAqmstQ";
@@ -66,6 +66,7 @@ class Application extends React.Component {
       page6Vis: "hidden",
       page7Vis: "hidden",
       page8Vis: "hidden",
+      page9Vis: "hidden",
       page1Play: true,
       volumeIcon: faVolumeOff,
       page1mute: true,
@@ -127,40 +128,45 @@ class Application extends React.Component {
     this.aboutGrahasti =
       "A term used to define a home, a household, its people, things and everything connected with looking after it. Invariably, the term is almost always used with reference to the woman being central to this act of looking after.";
 
-    this.theme0Desc =
+    this.pDesc =
       "The opening act set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. Some actors are to walk with stage directions from google reviews. Others are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through different acts.";
-    this.theme1Desc =
-      "I’ve laid out the scenes now, to arrange them, find an order, a cause and effect, the hero and the anti-hero and discern the rehearsal from the act, the actor from the director, the stage from the ground, to sift memories from scripts and index this audience at once synchronized and performing.";
-    this.theme2Desc =
-      "If nostalgia was the story, would it tell itself? But what if in its rare retelling, those images, objects, sounds and dialogues whose summoning this involves, tells you something else, a story in its multiple digressions, where objects that initially appear like gift shop souvenirs of past, mass manufactured shapes of collective memories, but instead turn out to be just flotsam. And in its salvage, you’re partially pressed between what you felt then and what you know now.";
-    this.theme3Desc =
-      "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
-    this.theme3Desc1 = "Dear Common Good,";
-    this.theme3Desc2 =
-      "I’m a designer, currently working on a short film. I have for the longest time followed your chief executive, Mr. Siddharth Gupta and his irrefutable take on naming brands.";
-    this.theme3Desc3 =
-      "I particularly identify with his naming of the Ganga pressure cooker; my friend’s mother had the same name and we were close friends. My friend, when she got married, also received an entire Ganga cooking range as a wedding gift. I believe, the groom’s family were quite particular about what gifts they wanted. And me, I’ve never taken a meal without bread made from the wheat flour, Annapurna. As best as I can remember, I did not have a friend by this name, though, my grandmother, a devout lady, prayed without end to the goddess, Annapurna.";
-    this.theme3Desc4 =
-      "Mr. Gupta is a revered Ad Man, and I’d love to have him sit for a talk. This interview, I strongly believe, will put the rest of the plot into perspective.";
-    this.page4Desc =
-      "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
-    this.page5Desc =
-      "And what of the bride, who reaches her marital home with utensils filled to their brim with grains, evidence of having received good care or upbringing (likely one of those)? Do we see these utensils in the frame? Should we see them? Close-ups, stills or do we see them as they are emptied by those in this home? Utensils filled with grain, gradually emptied. Must we see this to understand the story? ";
-    this.page7Desc =
-      "Also consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
 
+    this.page2Desc1 = "Dear Common Good,";
+    this.page2Desc2 =
+      "I’m a designer, currently working on a short film. I have for the longest time followed your chief executive, Mr. Siddharth Gupta and his irrefutable take on naming brands.";
+    this.page2Desc3 =
+      "I particularly identify with his naming of the Ganga pressure cooker; my friend’s mother had the same name and we were close friends. My friend, when she got married, also received an entire Ganga cooking range as a wedding gift. I believe, the groom’s family were quite particular about what gifts they wanted. And me, I’ve never taken a meal without bread made from the wheat flour, Annapurna. As best as I can remember, I did not have a friend by this name, though, my grandmother, a devout lady, prayed without end to the goddess, Annapurna.";
+    this.page2Desc4 =
+      "Mr. Gupta is a revered Ad Man, and I’d love to have him sit for a talk. This interview, I strongly believe, will put the rest of the plot into perspective.";
+
+    this.page3Desc =
+      "The question is, why does the muezzin suddenly follow up his recital with a declaration of his love for India? Or was it a plea? A plea far too big, a distance too remote for this neighborhood minaret to broadcast. And so, should I let part of this footage stay even though I could not logically connect it to the others ? Or the movie, is it really about identities and the weight of their struggle. And I had been looking for a face, a face most depicting of this fear. But for now, I will have to organize and find within this sound those precise points of nostalgia, power and fear. ";
+
+    this.page4Desc =
+      "And what of the bride, who reaches her marital home with utensils filled to their brim with grains, evidence of having received good care or upbringing (likely one of those)? Do we see these utensils in the frame? Should we see them? Close-ups, stills or do we see them as they are emptied by those in this home? Utensils filled with grain, gradually emptied. Must we see this to understand the story?";
+
+    this.page5Desc =
+      "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
+    
     this.page6Desc =
-      "The question is, why does the muezzin suddenly follow up his recital with a declaration of his love for India? Or was it a plea? A plea far too big, a distance too remote for this neighborhood minaret to broadcast. And I had been looking for a face, a face most depicting of this fear. But for now, I will have to organize and find within this sound those precise points of nostalgia, power and fear.";
+      "If nostalgia was the story, would it tell itself? But what if in its rare retelling, those images, objects, sounds and dialogues whose summoning this involves, tells you something else, a story in its multiple digressions, where objects that initially appear like gift shop souvenirs of past, mass manufactured shapes of collective memories, but instead turn out to be just flotsam. And in its salvage, you’re partially pressed between what you felt then and what you know now.";
+
+    this.page7Desc =
+      "I’ve laid out the scenes now, to arrange them, find an order, a cause and effect, the hero and the anti-hero and discern the rehearsal from the act, the actor from the director, the stage from the ground, to sift memories from scripts and index this audience at once synchronized and performing.";
+
+    this.page8Desc =
+      "Consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
+
   }
   /* Video URLs*/
   theme0Video = "https://player.vimeo.com/video/467182611";
-  theme1Video = "https://vimeo.com/448630508/11ec6d4d54";
-  theme2Video = "https://vimeo.com/448632066/2ab228f98c";
-  theme3Video = "https://vimeo.com/448631543/98f339b864";
-  theme4Video = "https://player.vimeo.com/video/468048345";
-  theme5Video = "https://vimeo.com/468749930/9aa12e293d";
-  theme6Video = "https://player.vimeo.com/video/468522985";
-  theme7Video = "https://player.vimeo.com/video/468487439";
+  theme1Video = "https://vimeo.com/448631543/98f339b864";
+  theme3Video = "https://player.vimeo.com/video/468522985";
+  theme4Video = "https://vimeo.com/468749930/9aa12e293d";
+  theme5Video = "https://player.vimeo.com/video/468048345";
+  theme6Video = "https://vimeo.com/448632066/2ab228f98c";
+  theme7Video = "https://vimeo.com/448630508/11ec6d4d54";
+  theme8Video = "https://player.vimeo.com/video/468487439";
 
   /* Legend colors */
   godsColor = "#79859a";
@@ -175,7 +181,7 @@ class Application extends React.Component {
 
   /* Theme Position Variables*/
   circleState = 0;
-  maxThemes = 7;
+  maxThemes = 8;
   triangleState = false;
   themeDescLeft = 0.6 * window.innerWidth;
   themeDescWidth = 0.35 * window.innerWidth;
@@ -184,9 +190,9 @@ class Application extends React.Component {
 
   /* Map bounds */
   bounds = [
-[78.470, 17.370], // Southwest coordinates
-[78.4760, 17.380] // Northeast coordinates
-];
+    [78.47, 17.37], // Southwest coordinates
+    [78.477, 17.38] // Northeast coordinates
+  ];
 
   /*On Mount*/
   componentDidMount() {
@@ -629,7 +635,7 @@ class Application extends React.Component {
     if (this.circleState == 0) {
       this.setState({
         page1Vis: "visible",
-        page8Vis: "hidden",
+        page9Vis: "hidden",
         page2Vis: "hidden",
         page1Play: true
       });
@@ -663,6 +669,9 @@ class Application extends React.Component {
     }
     if (this.circleState == 7) {
       this.setState({ page8Vis: "visible", page7Vis: "hidden" });
+    }
+    if (this.circleState == 8) {
+      this.setState({ page9Vis: "visible", page8Vis: "hidden" });
     }
   }
   /*When clicked on Prev button*/
@@ -711,8 +720,11 @@ class Application extends React.Component {
       this.setState({ page7Vis: "visible", page8Vis: "hidden" });
     }
     if (this.circleState == 7) {
+      this.setState({ page8Vis: "visible", page9Vis: "hidden" });
+    }
+    if (this.circleState == 8) {
       this.setState({
-        page8Vis: "visible",
+        page9Vis: "visible",
         page1Vis: "hidden",
         page1Play: false
       });
@@ -738,6 +750,7 @@ class Application extends React.Component {
         page6Vis: "hidden",
         page7Vis: "hidden",
         page8Vis: "hidden",
+        page9Vis: "hidden",
         page1Play: false
       });
     } else {
@@ -854,7 +867,7 @@ class Application extends React.Component {
             zIndex: 1
           }}
         >
-          <text className="themeDesc">{this.theme0Desc}</text>
+          <text className="themeDesc">{this.page1Desc}</text>
         </div>
         {/*Page 1 Mute Control*/}
         <span
@@ -887,7 +900,7 @@ class Application extends React.Component {
           }}
         />
 
-        {/* Page 2: Theme 1*/}
+        {/*Page 2*/}
         <div
           style={{
             position: "fixed",
@@ -899,19 +912,32 @@ class Application extends React.Component {
             visibility: this.state.page3Vis
           }}
         >
-          {/*Theme 1 Description*/}
+          {/*Description 2*/}
           <div
             style={{
-              display: "inline-block",
               position: "absolute",
               top: this.themeTop,
+              height: 0.6 * window.innerHeight,
               width: this.themeDescWidth,
-              left: this.themeDescLeft
+              left: this.themeDescLeft,
+              pointerEvents: "all",
+              overflow: "scroll"
             }}
           >
-            <text className="themeDesc">{this.theme1Desc}</text>
+            <text className="themeDesc">
+              {this.page2Desc1}
+              <br />
+              <br />
+              {this.page2Desc2}
+              <br />
+              <br />
+              {this.page2Desc3}
+              <br />
+              <br />
+              {this.page2Desc4}
+            </text>
           </div>
-          {/*Theme 1 Video*/}
+          {/*Video 2*/}
           <ReactPlayer
             className="video"
             ref={el => (this.video1Ref = el)}
@@ -928,7 +954,7 @@ class Application extends React.Component {
           />
         </div>
 
-        {/*Page 4: Theme 3*/}
+        {/*Theme 3*/}
         <div
           style={{
             position: "fixed",
@@ -940,32 +966,19 @@ class Application extends React.Component {
             pointerEvents: "none"
           }}
         >
-          {/*Theme 3 Description*/}
+          {/*Description 3*/}
           <div
             style={{
+              display: "inline-block",
               position: "absolute",
               top: this.themeTop,
-              height: 0.6 * window.innerHeight,
               width: this.themeDescWidth,
-              left: this.themeDescLeft,
-              pointerEvents: "all",
-              overflow: "scroll"
+              left: this.themeDescLeft
             }}
           >
-            <text className="themeDesc">
-              {this.theme3Desc1}
-              <br />
-              <br />
-              {this.theme3Desc2}
-              <br />
-              <br />
-              {this.theme3Desc3}
-              <br />
-              <br />
-              {this.theme3Desc4}
-            </text>
+            <text className="themeDesc">{this.page3Desc}</text>
           </div>
-          {/*Theme 3 Video*/}
+          {/*Video 3*/}
           <ReactPlayer
             className="video"
             ref={el => (this.video1Ref = el)}
@@ -983,7 +996,7 @@ class Application extends React.Component {
           />
         </div>
 
-        {/*Page 5: Theme 4*/}
+        {/*Theme 4*/}
         <div
           style={{
             position: "fixed",
@@ -995,7 +1008,7 @@ class Application extends React.Component {
             visibility: this.state.page5Vis
           }}
         >
-          {/*Theme 4 Description*/}
+          {/*Description 4*/}
           <div
             style={{
               position: "absolute",
@@ -1007,7 +1020,7 @@ class Application extends React.Component {
           >
             <text className="themeDesc">{this.page4Desc}</text>
           </div>
-          {/*Theme 4 Video 1*/}
+          {/*Video 4*/}
           <ReactPlayer
             className="video"
             style={{
@@ -1022,7 +1035,7 @@ class Application extends React.Component {
             controls={true}
           />
         </div>
-        {/*Page 5: Theme 4*/}
+        {/*Page 5*/}
         <div
           style={{
             position: "fixed",
@@ -1034,7 +1047,7 @@ class Application extends React.Component {
             visibility: this.state.page6Vis
           }}
         >
-          {/*Theme 4 Description*/}
+          {/*Description 5*/}
           <div
             style={{
               position: "absolute",
@@ -1046,7 +1059,7 @@ class Application extends React.Component {
           >
             <text className="themeDesc">{this.page5Desc}</text>
           </div>
-          {/*Theme 4 Video 2*/}
+          {/*Video 5*/}
           <ReactPlayer
             className="video"
             style={{
@@ -1061,7 +1074,7 @@ class Application extends React.Component {
             controls={true}
           />
         </div>
-        {/*Page 5: Theme 4*/}
+        {/*Page 6*/}
         <div
           style={{
             position: "fixed",
@@ -1073,7 +1086,7 @@ class Application extends React.Component {
             visibility: this.state.page7Vis
           }}
         >
-          {/*Theme 4 Description*/}
+          {/*Description 6*/}
           <div
             style={{
               position: "absolute",
@@ -1085,7 +1098,7 @@ class Application extends React.Component {
           >
             <text className="themeDesc">{this.page6Desc}</text>
           </div>
-          {/*Theme 4 Video 3*/}
+          {/*Video 6*/}
           <ReactPlayer
             className="video"
             style={{
@@ -1100,7 +1113,7 @@ class Application extends React.Component {
             controls={true}
           />
         </div>
-        {/*Page 5: Theme 4*/}
+        {/*Page 7*/}
         <div
           style={{
             position: "fixed",
@@ -1112,7 +1125,7 @@ class Application extends React.Component {
             visibility: this.state.page8Vis
           }}
         >
-          {/*Theme 4 Description*/}
+          {/*Description 7*/}
           <div
             style={{
               position: "absolute",
@@ -1124,7 +1137,7 @@ class Application extends React.Component {
           >
             <text className="themeDesc">{this.page7Desc}</text>
           </div>
-          {/*Theme 4 Video 4*/}
+          {/*Video 7*/}
           <ReactPlayer
             className="video"
             style={{
@@ -1134,6 +1147,45 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme7Video}
+            width={585}
+            height={360}
+            controls={true}
+          />
+        </div>
+        {/*Page 8*/}
+        <div
+          style={{
+            position: "fixed",
+            pointerEvents: "none",
+            left: 0,
+            top: 0,
+            height: "100%",
+            width: "100%",
+            visibility: this.state.page9Vis
+          }}
+        >
+          {/*Description 8*/}
+          <div
+            style={{
+              position: "absolute",
+              display: "inline-block",
+              top: this.themeTop,
+              width: this.themeDescWidth,
+              left: this.themeDescLeft
+            }}
+          >
+            <text className="themeDesc">{this.page8Desc}</text>
+          </div>
+          {/*Video 8*/}
+          <ReactPlayer
+            className="video"
+            style={{
+              display: "inline-block",
+              top: this.themeTop,
+              left: this.themeVidLeft,
+              zIndex: this.state.videoZindex4
+            }}
+            url={this.theme8Video}
             width={585}
             height={360}
             controls={true}
@@ -1860,8 +1912,8 @@ class Application extends React.Component {
                 style={{
                   display: "inline-block",
                   verticalAlign: "middle",
-                  height:14,
-                  width:14
+                  height: 14,
+                  width: 14
                 }}
                 src={logo}
               />
