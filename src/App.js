@@ -1010,8 +1010,8 @@ class Application extends React.Component {
               zIndex: this.state.videoZindex4
             }}
             url={this.theme4Video}
-            width={680}
-            height={360}
+            width={620}
+            height={33}
             controls={true}
           />
         </div>
