@@ -1011,7 +1011,7 @@ class Application extends React.Component {
             }}
             url={this.theme4Video}
             width={620}
-            height={33}
+            height={330}
             controls={true}
           />
         </div>
@@ -1678,7 +1678,7 @@ class Application extends React.Component {
                 }}
               >
                 Religious Goods; # Stores: 37; Commonly Sold: Idols, Incense,
-                Vermillon
+                Vermillion
               </p>
             </div>
             {/*Legend Beauty & Wedding*/}
