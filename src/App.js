@@ -853,7 +853,7 @@ class Application extends React.Component {
           fluid="true"
           playing={this.state.page1Play}
           controls={false}
-          volume={0.05}
+          volume={0.0}
           muted={this.state.page1mute}
         />
         {/*Page 1 Description*/}
