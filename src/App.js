@@ -182,6 +182,12 @@ class Application extends React.Component {
   themeVidLeft = 65;
   themeTop = 0.2 * window.innerHeight;
 
+  /* Map bounds */
+  bounds = [
+[78.470, 17.370], // Southwest coordinates
+[78.4760, 17.380] // Northeast coordinates
+];
+
   /*On Mount*/
   componentDidMount() {
     /*Update Dimenstions based on screen size*/
@@ -197,7 +203,8 @@ class Application extends React.Component {
       pitch: 60,
       bearing: 110,
       attributionControl: false,
-      interactive: false
+      interactive: false,
+      maxBounds: this.bounds // Sets bounds as max
     });
     /*Map Functions*/
     this.map.scrollZoom.disable();
