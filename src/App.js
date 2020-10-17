@@ -187,6 +187,7 @@ class Application extends React.Component {
   themeDescWidth = 0.35 * window.innerWidth;
   themeVidLeft = 65;
   themeTop = 0.2 * window.innerHeight;
+  legendWidth = window.innerWidth;
 
   /* Map bounds */
   bounds = [
@@ -1681,7 +1682,7 @@ class Application extends React.Component {
           className="legend"
           ref={this.legendRef}
           style={{
-            width: window.innerWidth,
+            width: this.legendWidth,
             height: this.state.legendHeight,
             fontSize: 28,
             zIndex: 100
@@ -1692,6 +1693,7 @@ class Application extends React.Component {
             style={{
               marginTop: 5,
               marginLeft: 50,
+              width: this.legendWidth/2,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
@@ -1817,6 +1819,7 @@ class Application extends React.Component {
             style={{
               marginTop: 5,
               marginLeft: 100,
+              width: this.legendWidth/2
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
