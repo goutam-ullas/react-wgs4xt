@@ -1405,7 +1405,7 @@ class Application extends React.Component {
               }}
             >
               {" "}
-              BIOGRAPHY {" "}
+              BIOGRAPH {" "}
             </p>
             <br/>
             <p
