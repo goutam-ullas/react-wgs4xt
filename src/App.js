@@ -1404,8 +1404,7 @@ class Application extends React.Component {
                 marginBottom: 0
               }}
             >
-              {" "}
-               {" "}
+              BIO
             </p>
             <br/>
             <p
