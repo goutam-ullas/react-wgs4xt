@@ -855,7 +855,7 @@ class Application extends React.Component {
           fluid="true"
           playing={this.state.page1Play}
           controls={false}
-          volume={0.0}
+          volume={0.1}
           muted={this.state.page1mute}
         />
         {/*Page 1 Description*/}
@@ -1447,7 +1447,7 @@ class Application extends React.Component {
               {" "}
               DATA SOURCE{" "}
             </p>
-                    <br/>
+            <br/>
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
