@@ -198,6 +198,7 @@ class Application extends React.Component {
 
   /*On Mount*/
   componentDidMount() {
+    window.ga('create', 'UA-177503689-1', 'auto');
     /*Update Dimenstions based on screen size*/
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
