@@ -855,7 +855,7 @@ class Application extends React.Component {
           fluid="true"
           playing={this.state.page1Play}
           controls={false}
-          volume={0.1}
+          volume={.}
           muted={this.state.page1mute}
         />
         {/*Page 1 Description*/}
