@@ -15,7 +15,7 @@ import { faVolumeOff, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import mapboxgl from "mapbox-gl";
 import SinglePagePDFViewer from "./single-page";
-import { sampleBase64pdf } from "./nThesisBase64pdf";
+import { sampleBase64pdf } from "./nThesis";
 import logo from "./Keyboard_Arrows.svg";
 
 mapboxgl.accessToken =
