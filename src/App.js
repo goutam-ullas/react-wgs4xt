@@ -854,8 +854,8 @@ class Application extends React.Component {
           width={1.2 * this.state.mapWidth}
           fluid="true"
           playing={this.state.page1Play}
+          
           controls={false}
-          volume={.}
           muted={this.state.page1mute}
         />
         {/*Page 1 Description*/}
