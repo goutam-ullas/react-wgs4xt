@@ -101,11 +101,12 @@ class Application extends React.Component {
     this.researchURL = this.researchURL.bind(this);
 
     /*Text Variables*/
+    this.bio = "Nikita Narayan is a multidisciplinary designer whose work navigates issues of identity, gender and space. Drawing on methods from ethnography, material culture, sociology and fiction, my work often takes shape as questions and attempts at understanding the socio-spatial and its associated politics. With work bent in research and mediums that result from it, I hope for my work to initiate dialogue and discussion.";
     this.aboutText =
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual segments, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. All within an area of less than a square kilometer, the bazar has about 196 beauty and wedding stores, 115 kitchen utensil stores, 33 grocery stores, 77 toy stores, 71 plastic goods or housekeeping supply stores, 37 stores selling religious supplies and 63 temples and mosques. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals, actors play multiple parts, wholesale roles. It is a patch of land, but a theatre, with rehearsals, scripts and episodic memories keeping gender desirable, as imagined by some, exacted and ordered, with its outlines defined, insides determined, and borders enforced.";
     this.aboutReferenceText =
       "I do not own the copyright to this video and some of the phrases from the article above. The use of these is purely for non-profit educational and research purposes.";
-    this.aboutTools = "Mapbox, Google Maps";
+    this.aboutTools = "Google Maps";
     this.aboutFonts = "Ballinger Mono, Kazimir Text";
     this.aboutDowry =
       "Goods, money, or property that a bride brings to her husband and his family during a wedding. In India, even after being outlawed, dowry is often demanded by the husband or his family. A practice that has been cited as a cause for about forty five percent of all homicides against women in India.";
@@ -1404,15 +1405,16 @@ class Application extends React.Component {
               }}
             >
               {" "}
-              TOOLS{" "}
+              BIOGRAPHY {" "}
             </p>
+            <br/>
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
                 marginTop: 0
               }}
             >
-              {this.aboutTools}
+              {this.bio}
             </p>
             <hr />
             <p
@@ -1434,9 +1436,30 @@ class Application extends React.Component {
               <br /> Prestige, ‘Prestige Jo Biwi se - Pressure Cooker’,{" "}
               <i>YouTube</i>, 26 February 2012 <br />
               <br /> {this.aboutReferenceText}
-              <br />
-              <br />
             </p>
+            <hr />
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              DATA SOURCE{" "}
+              <br/>
+              
+            </p>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutTools}
+              <br/>
+              <br/>
+            </p>            
           </div>
         </div>
         {/*Glossary Window*/}
