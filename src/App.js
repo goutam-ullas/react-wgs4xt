@@ -1819,7 +1819,7 @@ class Application extends React.Component {
             style={{
               marginTop: 5,
               marginLeft: 100,
-              width: this.legendWidth/2
+              width: this.legendWidth/2,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
