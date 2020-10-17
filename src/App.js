@@ -1446,9 +1446,8 @@ class Application extends React.Component {
             >
               {" "}
               DATA SOURCE{" "}
-              <br/>
-              
             </p>
+            <
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
