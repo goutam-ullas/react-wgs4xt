@@ -107,6 +107,7 @@ class Application extends React.Component {
     this.aboutReferenceText =
       "I do not own the copyright to this video and some of the phrases from the article above. The use of these is purely for non-profit educational and research purposes.";
     this.aboutTools = "Google Maps";
+    this.aboutActor = "Jonas David";
     this.aboutFonts = "Ballinger Mono, Kazimir Text";
     this.aboutDowry =
       "Goods, money, or property that a bride brings to her husband and his family during a wedding. In India, even after being outlawed, dowry is often demanded by the husband or his family. A practice that has been cited as a cause for about forty five percent of all homicides against women in India.";
@@ -1415,6 +1416,26 @@ class Application extends React.Component {
             >
               {this.bio}
             </p>
+            
+            <p
+              style={{
+                fontFamily: "ballinger-mono",
+                marginBottom: 0
+              }}
+            >
+              {" "}
+              ACTING CREDIT{" "}
+            </p>
+            <br/>
+            <p
+              style={{
+                fontFamily: "kazimirtext, sans-serif",
+                marginTop: 0
+              }}
+            >
+              {" "}
+              {this.aboutActor}            
+            </p>            
             <hr />
             <p
               style={{
