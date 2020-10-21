@@ -1416,7 +1416,7 @@ class Application extends React.Component {
             >
               {this.bio}
             </p>
-            
+            <hr />
             <p
               style={{
                 fontFamily: "ballinger-mono",
