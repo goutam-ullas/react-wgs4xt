@@ -29,6 +29,8 @@ class Application extends React.Component {
     this.state = {
       mapHeight: window.innerHeight,
       mapWidth: window.innerWidth,
+      bgWidth: window.innerWidth,
+      bgHeight: window.innerHeight,
       lng: 78.4735,
       lat: 17.375,
       value: 50,
@@ -101,7 +103,8 @@ class Application extends React.Component {
     this.researchURL = this.researchURL.bind(this);
 
     /*Text Variables*/
-    this.bio = "I am a multidisciplinary designer whose work navigates issues of identity, gender and space. Drawing on methods from ethnography, material culture, sociology and fiction, my work often takes shape as questions and attempts at understanding the socio-spatial and its associated politics. With work bent in research and mediums that result from it, I hope for my work to initiate dialogue and discussion.";
+    this.bio =
+      "I am a multidisciplinary designer whose work navigates issues of identity, gender and space. Drawing on methods from ethnography, material culture, sociology and fiction, my work often takes shape as questions and attempts at understanding the socio-spatial and its associated politics. With work bent in research and mediums that result from it, I hope for my work to initiate dialogue and discussion.";
     this.aboutText =
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual segments, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. All within an area of less than a square kilometer, the bazar has about 196 beauty and wedding stores, 115 kitchen utensil stores, 33 grocery stores, 77 toy stores, 71 plastic goods or housekeeping supply stores, 37 stores selling religious supplies and 63 temples and mosques. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals, actors play multiple parts, wholesale roles. It is a patch of land, but a theatre, with rehearsals, scripts and episodic memories keeping gender desirable, as imagined by some, exacted and ordered, with its outlines defined, insides determined, and borders enforced.";
     this.aboutReferenceText =
@@ -149,7 +152,7 @@ class Application extends React.Component {
 
     this.page5Desc =
       "The other thing is the picture of the child, who remained as a sample on the storekeeper’s phone, a sample of this set and its screenplay. And while recording, I knew that it was precisely at this moment in my narrative sequence that rage and anger should summit. But then again, what is the cost of manufacturing this rage and to what end?";
-    
+
     this.page6Desc =
       "If nostalgia was the story, would it tell itself? But what if in its rare retelling, those images, objects, sounds and dialogues whose summoning this involves, tells you something else, a story in its multiple digressions, where objects that initially appear like gift shop souvenirs of past, mass manufactured shapes of collective memories, but instead turn out to be just flotsam. And in its salvage, you’re partially pressed between what you felt then and what you know now.";
 
@@ -158,7 +161,6 @@ class Application extends React.Component {
 
     this.page8Desc =
       "Consider that instance of the patriarch, who in his insistence about the relevance of dowry, keeps mentioning the many movies he’s seen. In what had felt like being consumed by sharp moments of hesitations and illusions about beginnings, middles and ends, watching his faith in fiction, there were for me, brief flashes of deep belief. That I could tell a counter story, however disjointed. That eventually, I might find a form, a way to narrate these, connect instances of fear to power and identities to authority.";
-
   }
   /* Video URLs*/
   theme0Video = "https://player.vimeo.com/video/467182611";
@@ -490,18 +492,44 @@ class Application extends React.Component {
 
   /*Function to Update dimensions*/
   updateDimensions() {
+    this.setState({
+      mapWidth: window.innerWidth,
+      mapHeight: window.innerHeight
+    });
+    if ((window.innerHeight == (9 * window.innerWidth) / 16)) {
+      this.setState({
+        bgWidth: window.innerWidth,
+        bgHeight: window.innerHeight
+      });
+      console.log(this.state.bgWidth);
+    } else {
+      if (window.innerHeight < (9 * window.innerWidth) / 16) {
+        this.setState({
+          bgWidth: window.innerWidth,
+          bgHeight: (9 * window.innerWidth) / 16
+        });
+      } else {
+        this.setState({
+          bgHeight: window.innerHeight,
+          bgWidth: (16 * window.innerHeight) / 9
+        });
+        
+      }
+    }
+  }
+  /*updateDimensions() {
     if (window.innerWidth >= window.innerHeight) {
       this.setState({
         mapWidth: window.innerWidth,
         mapHeight: (9 * window.innerWidth) / 16
       });
     } else {
-      this.setState({
-        mapHeight: window.innerHeight,
-        mapWidth: (16 * window.innerHeight) / 9
-      });
+        this.setState({
+          mapHeight: window.innerHeight,
+          mapWidth: (16 * window.innerHeight) / 9
+        });
     }
-  }
+  }*/
 
   /*Function to remove popups when clicked inside About, Research, or Legend windows*/
   handleAboutResearchClick(event) {
@@ -846,17 +874,17 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             top: 0,
-            left: -0.1 * this.state.mapWidth,
+            left: -0.1 * this.state.bgWidth,
             visibility: this.state.page1Vis,
             zIndex: 0
           }}
           url={this.theme0Video}
-          height={1.2 * this.state.mapHeight}
-          width={1.2 * this.state.mapWidth}
+          height={1.2 * this.state.bgHeight}
+          width={1.2 * this.state.bgWidth}
           fluid="true"
           playing={this.state.page1Play}
           controls={false}
-          volume={0.15}          
+          volume={0.15}
           muted={this.state.page1mute}
         />
         {/*Page 1 Description*/}
@@ -864,7 +892,7 @@ class Application extends React.Component {
           style={{
             position: "fixed",
             top: this.themeTop,
-            width: 0.95*this.themeDescWidth,
+            width: 0.95 * this.themeDescWidth,
             left: this.themeDescLeft,
             visibility: this.state.page2Vis,
             zIndex: 1
@@ -1407,7 +1435,7 @@ class Application extends React.Component {
             >
               BIO
             </p>
-            <br/>
+            <br />
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
@@ -1426,7 +1454,7 @@ class Application extends React.Component {
               {" "}
               ACTING CREDIT{" "}
             </p>
-            <br/>
+            <br />
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
@@ -1434,8 +1462,8 @@ class Application extends React.Component {
               }}
             >
               {" "}
-              {this.aboutActor}            
-            </p>            
+              {this.aboutActor}
+            </p>
             <hr />
             <p
               style={{
@@ -1467,7 +1495,7 @@ class Application extends React.Component {
               {" "}
               DATA SOURCE{" "}
             </p>
-            <br/>
+            <br />
             <p
               style={{
                 fontFamily: "kazimirtext, sans-serif",
@@ -1476,9 +1504,9 @@ class Application extends React.Component {
             >
               {" "}
               {this.aboutTools}
-              <br/>
-              <br/>
-            </p>            
+              <br />
+              <br />
+            </p>
           </div>
         </div>
         {/*Glossary Window*/}
@@ -1735,7 +1763,7 @@ class Application extends React.Component {
             style={{
               marginTop: 5,
               marginLeft: 50,
-              width: this.legendWidth/2,
+              width: this.legendWidth / 2,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
@@ -1767,7 +1795,7 @@ class Application extends React.Component {
               >
                 Use arrow keys on keyboard to navigate the map
               </p>
-            </div>          
+            </div>
             {/*Legend Gods*/}
             <div
               style={{
@@ -1861,7 +1889,7 @@ class Application extends React.Component {
             style={{
               marginTop: 5,
               marginLeft: 100,
-              width: this.legendWidth/2,
+              width: this.legendWidth / 2,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
@@ -1887,7 +1915,7 @@ class Application extends React.Component {
               >
                 Grocery; # Stores: 33; Commonly Sold: Grains, Spices
               </p>
-            </div>          
+            </div>
             {/*Legend Toys*/}
             <div
               style={{
