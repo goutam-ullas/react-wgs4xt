@@ -496,7 +496,7 @@ class Application extends React.Component {
       mapWidth: window.innerWidth,
       mapHeight: window.innerHeight
     });
-    if ((window.innerHeight == (9 * window.innerWidth) / 16)) {
+    if (window.innerHeight == (9 * window.innerWidth) / 16) {
       this.setState({
         bgWidth: window.innerWidth,
         bgHeight: window.innerHeight
@@ -513,7 +513,6 @@ class Application extends React.Component {
           bgHeight: window.innerHeight,
           bgWidth: (16 * window.innerHeight) / 9
         });
-        
       }
     }
   }
@@ -635,10 +634,17 @@ class Application extends React.Component {
       this.setState({ legendHeight: 0, legendState: true });
     }
     if (this.state.researchState == true) {
-      this.setState({
-        researchWidth: "40.5%",
-        researchBorder: 50
-      });
+      if (window.innerWidth > 942) {
+        this.setState({
+          researchWidth: "40.5%",
+          researchBorder: 50
+        });
+      } else {
+        this.setState({
+          researchWidth: "100%",
+          researchBorder: 50
+        });
+      }
     } else {
       this.setState({
         researchWidth: 0,
@@ -854,12 +860,21 @@ class Application extends React.Component {
     const location = window.location;
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.get("query") == "research") {
-      this.setState({
-        researchState: false,
-        researchWidth: "40.5%",
-        legendState: true,
-        legendHeight: 0
-      });
+      if (window.innerWidth > 942) {
+        this.setState({
+          researchState: false,
+          researchWidth: "40.5%",
+          legendState: true,
+          legendHeight: 0
+        });
+      } else {
+        this.setState({
+          researchState: false,
+          researchWidth: "100%",
+          legendState: true,
+          legendHeight: 0
+        });
+      }
     }
   }
 
@@ -2032,13 +2047,15 @@ class Application extends React.Component {
             &#10005;
           </span>
           <div
-            style={{ position: "absolute", right: this.state.mapWidth / 30 }}
+            style={{width:"100%", textAlign:"center"}}  
           >
+          <div style={{display:"inline-block"}}>
             {/*Research Window - PDF 1*/}
             <SinglePagePDFViewer
               height={this.state.mapHeight - 90}
               pdf={sampleBase64pdf}
             />
+          </div>
           </div>
         </div>
         {/*Map Dots PopUps*/}

@@ -347,7 +347,8 @@ left: 0;
 bottom: 0;
 background-image: linear-gradient(to right, #fd3217,#fd3217 30%, #81a8ad);
 filter: drop-shadow(0 0 7px #aaaaaa);
-overflow:scroll;
+overflow-y:scroll;
+overflow-x:scroll;
 transition: height 0.5s;
 }
 
